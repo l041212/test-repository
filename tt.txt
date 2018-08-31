@@ -1,5 +1,14 @@
-sddddddddddd
+sddddddddddid
 fsfs
 fdsfdsfdsfd
 s
 gailema 
+
+
+git pull origin master
+
+git status
+git add ./*
+git commit -m 'remark'
+
+git push origin master

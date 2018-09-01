@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02b683d9-0e06-4784-89d1-5397e5fa40ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/base/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/base/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/jobInfo/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/jobInfo/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,31 +23,36 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="1" />
-          <entry key="py" value="28" />
+          <entry key="py" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="Python" value="28" />
+          <entry key="Python" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="8" />
-          <entry key="py" value="1165" />
+          <entry key="py" value="1347" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="8" />
-          <entry key="Python" value="1165" />
+          <entry key="Python" value="1347" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/manage.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zaixian/settings.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -74,12 +77,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/jobInfo/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+            <state relative-caret-position="180">
+              <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
-                <marker date="1535789064747" expanded="true" signature="111:112" ph="..." />
-                <marker date="1535789064747" expanded="true" signature="111:116" ph="..." />
+                <marker date="1535790219213" expanded="true" signature="111:112" ph="..." />
+                <marker date="1535790219213" expanded="true" signature="111:127" ph="..." />
               </folding>
             </state>
           </provider>
@@ -88,8 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/base/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+            <state relative-caret-position="90">
+              <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="7" selection-end-column="23" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
                 <marker date="1535789064819" expanded="true" signature="123:171" ph="..." />
@@ -141,8 +144,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="346" />
-    <option name="y" value="355" />
+    <option name="x" value="671" />
+    <option name="y" value="284" />
     <option name="width" value="1116" />
     <option name="height" value="620" />
   </component>
@@ -186,7 +189,18 @@
             <path>
               <item name="zaixian" type="b2602c69:ProjectViewProjectNode" />
               <item name="zaixian" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="jobInfo" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zaixian" type="b2602c69:ProjectViewProjectNode" />
               <item name="zaixian" type="462c0819:PsiDirectoryNode" />
+              <item name="zaixian" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zaixian" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -264,10 +278,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="346" y="355" width="1116" height="620" extended-state="0" />
-    <editor active="true" />
+    <frame x="671" y="284" width="1116" height="620" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6111111" visible="true" weight="0.18063314" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6111111" visible="true" weight="0.18063314" />
       <window_info id="Favorites" order="1" sideWeight="0.38666666" side_tool="true" weight="0.23708487" />
       <window_info id="Structure" order="2" sideWeight="0.3888889" side_tool="true" weight="0.23708487" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
@@ -275,12 +288,12 @@
       <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" sideWeight="0.4990775" weight="0.32933104" />
       <window_info anchor="bottom" id="Version Control" order="3" />
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50738007" side_tool="true" weight="1.0" />
-      <window_info anchor="bottom" id="Terminal" order="5" sideWeight="0.50553507" weight="0.35095137" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="5" sideWeight="0.50553507" visible="true" weight="0.35095137" />
       <window_info anchor="bottom" id="Python Console" order="6" sideWeight="0.5424354" weight="0.32590052" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32980973" />
       <window_info anchor="bottom" id="TODO" order="9" sideWeight="0.49815497" weight="0.32761577" />
-      <window_info anchor="bottom" id="Run" order="10" sideWeight="0.49910071" visible="true" weight="0.32769555" />
+      <window_info anchor="bottom" id="Run" order="10" sideWeight="0.49910071" weight="0.32769555" />
       <window_info anchor="bottom" id="Debug" order="11" sideWeight="0.49261993" weight="0.3567753" />
       <window_info anchor="bottom" id="Database Console" order="12" sideWeight="0.49815497" weight="0.32933104" />
       <window_info anchor="bottom" id="Cvs" order="13" weight="0.25" />
@@ -387,9 +400,6 @@
     <entry file="file://$PROJECT_DIR$/apps/jobRequirement/services.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/zaixian/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -409,8 +419,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/base/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        <state relative-caret-position="90">
+          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="7" selection-end-column="23" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
             <marker date="1535789064819" expanded="true" signature="123:171" ph="..." />
@@ -420,14 +430,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/jobInfo/migrations/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/apps/jobInfo/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        <state relative-caret-position="180">
+          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-            <marker date="1535789064747" expanded="true" signature="111:112" ph="..." />
-            <marker date="1535789064747" expanded="true" signature="111:116" ph="..." />
+            <marker date="1535790219213" expanded="true" signature="111:112" ph="..." />
+            <marker date="1535790219213" expanded="true" signature="111:127" ph="..." />
           </folding>
         </state>
       </provider>

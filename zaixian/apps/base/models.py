@@ -7,8 +7,8 @@ class Base(models.Model):
     def Meta(object):
         abstract = True
 
-    createUser = models.CharField(max_length=32, null=True)
-    updateUser = models.CharField(max_length=32, null=True)
+    createUser = models.CharField(max_length=32, null=True, default=None)
+    updateUser = models.CharField(max_length=32, null=True, default=None)
     createTime = models.DateTimeField(auto_now=True)
     updateTime = models.DateTimeField(null=True, default=timezone.now())
     status = models.CharField(max_length=16, null=True, default=None)

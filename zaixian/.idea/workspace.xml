@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02b683d9-0e06-4784-89d1-5397e5fa40ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../readme.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-config/simple-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../test-config/simple-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test-config/test-sample-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../test-config/test-sample-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zaixian/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/zaixian/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zaixian/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/zaixian/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zaixian/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/zaixian/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zaixian/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/zaixian/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/base/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/base/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/jobInfo/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/jobInfo/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,25 +25,25 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="1" />
-          <entry key="py" value="26" />
+          <entry key="py" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="Python" value="26" />
+          <entry key="Python" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="8" />
-          <entry key="py" value="682" />
+          <entry key="py" value="1165" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="8" />
-          <entry key="Python" value="682" />
+          <entry key="Python" value="1165" />
         </counts>
       </usages-collector>
     </session>
@@ -63,13 +59,42 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zaixian/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="25" column="71" selection-start-line="25" selection-start-column="71" selection-end-line="25" selection-end-column="71" />
+            <state relative-caret-position="405">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
               <folding>
                 <element signature="e#631#663#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apps/jobInfo/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+                <marker date="1535789064747" expanded="true" signature="111:112" ph="..." />
+                <marker date="1535789064747" expanded="true" signature="111:116" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/base/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="79">
+              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+                <marker date="1535789064819" expanded="true" signature="123:171" ph="..." />
+                <marker date="1535789064819" expanded="true" signature="123:292" ph="..." />
+                <marker date="1535789064819" expanded="true" signature="123:349" ph="..." />
               </folding>
             </state>
           </provider>
@@ -104,6 +129,8 @@
         <option value="$PROJECT_DIR$/apps/base/services.py" />
         <option value="$PROJECT_DIR$/zaixian/urls.py" />
         <option value="$PROJECT_DIR$/zaixian/settings.py" />
+        <option value="$PROJECT_DIR$/apps/base/models.py" />
+        <option value="$PROJECT_DIR$/apps/jobInfo/models.py" />
       </list>
     </option>
   </component>
@@ -114,8 +141,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="457" />
-    <option name="y" value="341" />
+    <option name="x" value="346" />
+    <option name="y" value="355" />
     <option name="width" value="1116" />
     <option name="height" value="620" />
   </component>
@@ -142,6 +169,19 @@
               <item name="zaixian" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
               <item name="base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zaixian" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zaixian" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zaixian" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zaixian" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="jobInfo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zaixian" type="b2602c69:ProjectViewProjectNode" />
@@ -224,7 +264,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="457" y="341" width="1116" height="620" extended-state="0" />
+    <frame x="346" y="355" width="1116" height="620" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6111111" visible="true" weight="0.18063314" />
@@ -359,10 +399,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zaixian/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="25" column="71" selection-start-line="25" selection-start-column="71" selection-end-line="25" selection-end-column="71" />
+        <state relative-caret-position="405">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
           <folding>
             <element signature="e#631#663#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/base/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1535789064819" expanded="true" signature="123:171" ph="..." />
+            <marker date="1535789064819" expanded="true" signature="123:292" ph="..." />
+            <marker date="1535789064819" expanded="true" signature="123:349" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/jobInfo/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1535789064747" expanded="true" signature="111:112" ph="..." />
+            <marker date="1535789064747" expanded="true" signature="111:116" ph="..." />
           </folding>
         </state>
       </provider>

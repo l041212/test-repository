@@ -39,6 +39,17 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+APPLIST = [
+    'apps.base',
+    'apps.login',
+    'apps.jobInfo',
+    'apps.jobRequirement',
+    'apps.jobModule',
+    'apps.testReport',
+]
+
+INSTALLED_APPS += APPLIST
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -48,6 +59,12 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+MIDDLEWARELIST = [
+
+]
+
+MIDDLEWARE += MIDDLEWARELIST
 
 ROOT_URLCONF = 'zaixian.urls'
 
@@ -75,8 +92,12 @@ WSGI_APPLICATION = 'zaixian.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        'USER': 'root',
+        'PASSWORD': 'root',
+        'NAME': 'zaixian',
     }
 }
 
@@ -118,3 +139,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'apps/base/static/'),
+    os.path.join(BASE_DIR, 'apps/login/static/'),
+    os.path.join(BASE_DIR, 'apps/jobInfo/static/'),
+    os.path.join(BASE_DIR, 'apps/jobRequirement/static/'),
+    os.path.join(BASE_DIR, 'apps/jobModule/static/'),
+    os.path.join(BASE_DIR, 'apps/testReport/static/'),
+]

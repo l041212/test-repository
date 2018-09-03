@@ -1,0 +1,121 @@
+测试员：
+	user表 name e-mail password
+	 
+
+
+
+
+
+
+
+心理学家：
+
+
+
+
+
+
+管理员：
+
+
+
+
+
+
+HR：
+
+login:
+
+create table user(                   --用户表
+  id int(20) primary key,
+  name varchar(32) default null comment '名称',
+  code varchar(32) default null comment '帐号名称',
+  role varchar(16) default null comment '角色权限',    --['tester','admin','hr']
+  email varchar(64) default null comment '邮箱地址',
+  status int(2) default null,       --[0,1,2]
+  isDelete int(2) default false
+)
+
+登录页面
+注册页面
+框架页面
+request.session['user'] =User()
+
+job:
+  description:
+
+create table job(                     --职业表
+  id int(20) primary key,
+  name varchar(32) default null comment '名称',
+  property varchar(32) default null comment '属性',
+  rank varchar(32) default null comment '级别',
+  description varchar(128) default null '描述',
+  createTime datetime default null,
+  updateTime datetime default null,
+  createUser varchar(32) default null,
+  updateUser varchar(32) default null,
+  status int(20) default null,     --[0,10,20]
+  isDelete int(2) default false
+  
+)
+
+job:
+  requirement:
+
+create table job_requirement(           --职业需求
+  id int(20) primary key comment 'id'，
+  education varchar(32) default null comment '教育',
+  experience varchar(256) default null comment '经验',
+  passTime varchar(32) default null  comment'资历',
+  certificate varchar(128) default null comment '证书',
+  major varchar(64) default null comment '专业',
+  skill varchar(128) default null '技能',
+  job_id int(20) foregin key comment 'job表的外键',
+  isDelete int(2) default false
+)
+
+---测试表
+
+test:
+  send:
+   
+
+test:
+  report:  
+
+create table test(
+  id int(20) primary key,
+  name varchar(32) default null comment '名称',
+  user_id int(20) default null comment '用户id',
+  job_id int(20) foreign key comment 'job表的外键',
+  match int(20) default null comment '匹配度',
+  attachment varchar(128) default null comemnt '附件',
+  text varchar(1024) default null comment '文本',
+  createTime datetime default null,
+  updateTime datetime default null,
+  createUser varchar(32) default null,
+  updateUser varchar(32) default null,
+  isDelete int(2) default false
+)
+
+----模板表
+
+job:
+  module:
+
+create table job_module(
+  id int(20) primary key,
+  name varchar(32) default null comment '模板名称',
+  job_id int(20) foreign key comment 'job表的外键',
+  attachment varchar(128) default null comemnt '附件',
+  text varchar(1024) default null comment '文本',
+  isDelete int(2) default false
+)
+登录。注册----{
+                          user
+}
+职位列表 list info         job
+需求列表 list info         job_requirement
+测试邀请 list info         
+测试报告 list info         test
+模型列表 list info         job_module

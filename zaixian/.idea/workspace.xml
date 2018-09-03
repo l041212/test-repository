@@ -2,15 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02b683d9-0e06-4784-89d1-5397e5fa40ea" name="Default Changelist" comment="">
+<<<<<<< Updated upstream
       <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/apps/jobModule/templates/jobModulea.html" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/../test-repository" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tt.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../tt.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zai/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../zai/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zai/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../zai/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zai/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/../zai/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zai/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/../zai/migrations/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zai/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../zai/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zai/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/../zai/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../zai/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../zai/views.py" afterDir="false" />
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/zaixian.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/zaixian.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/base/migrations/0001_initial.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/base/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/base/models.py" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/apps/jobModule/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/jobModule/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/jobModule/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/jobModule/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zaixian/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/zaixian/settings.py" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/apps/jobInfo/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/jobInfo/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/jobInfo/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/jobInfo/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/jobModule/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/jobModule/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/jobRequirement/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/jobRequirement/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/jobRequirement/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/jobRequirement/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/login/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/login/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/login/static/style/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/apps/login/static/style/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/login/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/login/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/testReport/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/testReport/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/bin/activate" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/activate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/bin/activate.csh" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/activate.csh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/bin/activate.fish" beforeDir="false" afterPath="$PROJECT_DIR$/venv/bin/activate.fish" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/pyvenv.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pyvenv.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../职位模板" beforeDir="false" afterPath="$PROJECT_DIR$/../职位模板" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,14 +118,47 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-2036618241">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="15" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Python" value="15" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="528" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="528" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/jobModule/models.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="165">
               <caret line="11" column="39" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="39" />
+=======
+            <state relative-caret-position="80">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -108,8 +171,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/zaixian/settings.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="337">
               <caret line="42" column="11" lean-forward="true" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
+=======
+            <state relative-caret-position="432">
+              <caret line="120" column="1" selection-start-line="120" selection-start-column="1" selection-end-line="120" selection-end-column="1" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -123,6 +191,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/jobModule/views.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -144,6 +213,8 @@
           </provider>
         </entry>
       </file>
+=======
+>>>>>>> Stashed changes
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -171,6 +242,7 @@
         <option value="$PROJECT_DIR$/apps/base/templates/base.html" />
         <option value="$PROJECT_DIR$/apps/base/services.py" />
         <option value="$PROJECT_DIR$/zaixian/urls.py" />
+<<<<<<< Updated upstream
         <option value="$PROJECT_DIR$/apps/jobInfo/models.py" />
         <option value="$PROJECT_DIR$/apps/base/models.py" />
         <option value="$PROJECT_DIR$/apps/jobModule/templates/jobModule.html" />
@@ -178,6 +250,15 @@
         <option value="$PROJECT_DIR$/apps/jobModule/templates/jobModulea.html" />
         <option value="$PROJECT_DIR$/apps/jobModule/urls.py" />
         <option value="$PROJECT_DIR$/zaixian/settings.py" />
+=======
+        <option value="$PROJECT_DIR$/zaixian/settings.py" />
+        <option value="$PROJECT_DIR$/apps/jobInfo/models.py" />
+        <option value="$PROJECT_DIR$/apps/jobModule/models.py" />
+        <option value="$PROJECT_DIR$/apps/jobRequirement/models.py" />
+        <option value="$PROJECT_DIR$/apps/login/models.py" />
+        <option value="$PROJECT_DIR$/apps/testReport/models.py" />
+        <option value="$PROJECT_DIR$/apps/base/models.py" />
+>>>>>>> Stashed changes
       </list>
     </option>
   </component>
@@ -188,10 +269,17 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< Updated upstream
     <option name="x" value="536" />
     <option name="y" value="106" />
     <option name="width" value="1144" />
     <option name="height" value="794" />
+=======
+    <option name="x" value="351" />
+    <option name="y" value="185" />
+    <option name="width" value="1116" />
+    <option name="height" value="638" />
+>>>>>>> Stashed changes
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -228,6 +316,12 @@
               <item name="zaixian" type="b2602c69:ProjectViewProjectNode" />
               <item name="zaixian" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="jobInfo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zaixian" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zaixian" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
               <item name="jobModule" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -237,6 +331,39 @@
               <item name="apps" type="462c0819:PsiDirectoryNode" />
               <item name="jobModule" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zaixian" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zaixian" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="jobModule" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zaixian" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zaixian" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="jobRequirement" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zaixian" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zaixian" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="jobRequirement" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zaixian" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zaixian" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="testReport" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zaixian" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zaixian" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="testReport" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zaixian" type="b2602c69:ProjectViewProjectNode" />
@@ -286,7 +413,6 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="DJANGO_SETTINGS_MODULE" value="zaixian.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -319,17 +445,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< Updated upstream
     <frame x="536" y="106" width="1144" height="794" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6111111" visible="true" weight="0.17542298" />
+=======
+    <frame x="351" y="185" width="1116" height="638" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6111111" visible="true" weight="0.18342644" />
+>>>>>>> Stashed changes
       <window_info id="Favorites" order="1" sideWeight="0.38666666" side_tool="true" weight="0.23708487" />
       <window_info id="Structure" order="2" sideWeight="0.3888889" side_tool="true" weight="0.23708487" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="REST Client" order="1" sideWeight="0.81588787" weight="0.47611204" />
       <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" sideWeight="0.4990775" weight="0.32933104" />
       <window_info anchor="bottom" id="Version Control" order="3" />
+<<<<<<< Updated upstream
       <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50738007" side_tool="true" weight="1.0" />
       <window_info active="true" anchor="bottom" id="Terminal" order="5" sideWeight="0.50553507" visible="true" weight="0.35085008" />
+=======
+      <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.50738007" side_tool="true" weight="0.6680244" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="5" sideWeight="0.50553507" visible="true" weight="0.3503055" />
+>>>>>>> Stashed changes
       <window_info anchor="bottom" id="Python Console" order="6" sideWeight="0.5424354" weight="0.32590052" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32790223" />
@@ -564,10 +701,41 @@
     <entry file="file://$PROJECT_DIR$/apps/jobInfo/migrations/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/apps/jobInfo/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="67">
           <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+=======
+    <entry file="file://$PROJECT_DIR$/apps/login/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/base/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="59" selection-start-line="14" selection-start-column="59" selection-end-line="14" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/jobInfo/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1535941516437" expanded="true" signature="136:176" ph="..." />
+          </folding>
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -578,27 +746,57 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/apps/jobModule/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
           <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+=======
+    <entry file="file://$PROJECT_DIR$/apps/testReport/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+>>>>>>> Stashed changes
           <folding>
             <element signature="e#631#663#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/apps/jobModule/templates/jobModulea.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+=======
+    <entry file="file://$PROJECT_DIR$/apps/jobRequirement/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/zaixian/settings.py">
+<<<<<<< Updated upstream
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="337">
           <caret line="42" column="11" lean-forward="true" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
+=======
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="120" column="1" selection-start-line="120" selection-start-column="1" selection-end-line="120" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/jobModule/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>

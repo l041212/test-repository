@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block head %}
+    <link rel="stylesheet" href="/static/style/login_frame.css">
+    <script src="/static/script/login_frame.js"></script>
+{% endblock %}
+{% block header %}
+{% endblock %}
+{% block body %}
+    <div id="frame_menu" class="col-md-2">
+        <div id="frame_menu_top" class="card">
+        </div>
+        <div id="frame_menu_content" class="card">
+            <div class="card-header">
+                <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                    职业管理
+                </a>
+            </div>
+            <div id="collapseOne" class="collapse show" data-parent="#frame_menu">
+                <div class="card-body">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">职业描述</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">职业要求</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">职业模型</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                    测试管理
+                </a>
+            </div>
+            <div id="collapseTwo" class="collapse" data-parent="#frame_menu">
+                <div class="card-body">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">测试邀请</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">测试报告</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="frame_content" class="col-md-10">
+        {% block content %}
+        {% endblock %}
+    </div>
+{% endblock %}

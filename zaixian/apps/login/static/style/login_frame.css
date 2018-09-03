@@ -1,0 +1,11 @@
+
+#frame_menu {
+    float: left;
+}
+#frame_content {
+    float: left;
+}
+
+#frame_menu #frame_menu_top {
+    height: 120px;
+}

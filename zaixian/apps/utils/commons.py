@@ -35,3 +35,17 @@ def reverse(set):
     for key in set.__dict__:
         dict[key] = str(set.__getattribute__(key))
     return dict
+
+def writeFlowInfo(entity, type):
+    if isNotNull(entity.id, 'str'):
+        items = type.objects.filter(pk=entity.id)
+        if len(items) > 0:
+            entity.createUser = items[0].createUser
+            entity.createTime = items[0].createTime
+            entity.isDelete = items[0].isDelete
+    return entity
+
+def isNotNull(value, type):
+    if type == 'str':
+        return value != None and str(value).strip() != ''
+    return False

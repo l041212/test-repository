@@ -1,0 +1,108 @@
+{% extends 'login_frame.html' %}
+{% block header %}
+{% endblock %}
+{% block content %}
+<style>
+nav {
+    margin:0px auto;
+    text-align:center;
+}
+nav ul {
+    border-radius:10px;
+    background:linear-gradient(to bottom,#efefef,#bbbbbb);
+    padding:0 20px;
+    display:inline-table;
+    position:relative;
+    box-shadow:0px 0px 0px #666;
+}
+nav ul ul {
+    display:none;
+}
+nav ul li {
+    float:left;
+}
+nav ul::after {
+    content:"";
+    display:block;
+    clear:both;
+}
+nav ul li a {
+    display:block;
+    padding:20px 10px;
+    color:#000;
+    text-decoration:none;
+    font-family:"微软雅黑";
+}
+nav ul li:hover > ul {
+    display:block;
+}
+nav ul li:hover {
+    background:linear-gradient(to bottom,#4f5964,#5f6975);
+}
+nav ul li:hover a {
+    color:#FFF;
+}
+nav ul ul {
+    background:#5f6975;
+    border-radius:0;
+    position:absolute;
+    top:100%;
+    padding:0;
+}
+nav ul ul li {
+    float:none;
+    border-top:1px solid #6b727c;
+    border-bottom:1px solid #575f6a;
+}
+nav ul ul li a {
+    color:#FFF;
+}
+nav ul ul li a:hover {
+    background:#4b545f;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+
+</style>
+<body>
+<nav>
+<ul>
+    <li><a class="active" href="#home" >模型详情</a>
+                <ul>
+                    <li><a href="#">二级导航</a></li>
+                    <li><a href="#">二级导航</a></li>
+                </ul>
+    </li>
+    <li><a href="name">应聘者姓名</a>
+                <ul>
+                    <li><a href="#">二级导航</a></li>
+                    <li><a href="#">二级导航</a></li>
+                    <li><a href="#">二级导航</a></li>
+                    <li><a href="#">二级导航</a></li>
+                </ul>
+    </li>
+  <li><a href="test">核心胜任力</a></li>
+  <li><a href="test">行为预测</a></li>
+  <li><a href="test">性格特质</a></li>
+  <li><a href="attachment">附件</a></li>
+  <li><a href="jobInfo_id">职业</a>
+                <ul>
+                    <li><a href="#">二级导航</a></li>
+                    <li><a href="#">二级导航</a></li>
+                    <li><a href="#">二级导航</a></li>
+                    <li><a href="#">二级导航</a></li>
+                </ul>
+  </li>
+</ul>
+ </nav>
+
+</body>
+{% endblock %}

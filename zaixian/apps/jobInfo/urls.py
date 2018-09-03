@@ -14,8 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.conf.urls import url
+from apps.jobInfo.views import *
 
 app_name = 'jobInfo'
 urlpatterns = [
-
+    url(r'^table/(?P<action>(read)|(write))/(?P<id>\d*)/?$', table),
+    url(r'^list/$', list),
+    url(r'^save/$', save),
 ]

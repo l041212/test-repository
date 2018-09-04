@@ -1,0 +1,19 @@
+{% extends 'login_frame.html' %}
+{% block header %}
+    <title>测试报告新增</title>
+    <meta charset="utf-8">
+    <style>
+
+
+    </style>
+{% endblock %}
+{% block content%}
+    <h1>新增测试员信息</h1>
+    <form method="post" action="test_choice.html">
+        名字是：<input type="text"  name="testName" ><br>
+        修改日期：<input type="date" name="dateChange"><br>
+        职务：<input type="text" name="workName"><br>
+        匹配度: <input type="text" name="same" ><br>
+        <input type="submit" value="提交">
+    </form>
+{% endblock %}

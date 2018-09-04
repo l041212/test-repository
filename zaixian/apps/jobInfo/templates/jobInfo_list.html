@@ -10,14 +10,19 @@
             <form action="" method="post">
                 <div class="card">
                     <div id="search" class="card-header">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
                         <div class="form-group">
-                            <input type="hidden" name="category_id" value="{{category_id}}">
-                            <label class="col-md-2" for="title">title:</label>
-                            <input class="col-md-2" name="title">
-                            <label class="col-md-2" for="updateTime_from">updateTime:</label>
-                            <input class="col-md-2" type="date" name="updateTime_from">
-                            <label for="updateTime_to">-</label>
-                            <input class="col-md-2" type="date" name="updateTime_to">
+                            <label class="col-md-2" for="name">职业名称:</label>
+                            <input class="col-md-2" type="text" name="name">
+                            <label class="col-md-2" for="status">状态:</label>
+                            <input type="hidden" name="status">
+                            <select class="col-md-2"  name="_status">
+                                <option value=""></option>
+                                <option value="0">测试中</option>
+                                <option value="1">生成中</option>
+                                <option value="2">已生成</option>
+                            </select>
+
                         </div>
                     </div>
                     <div id="table" class="card-body">
@@ -31,9 +36,11 @@
                                 <thead>
                                     <tr>
                                         <th></th>
-                                        <th>title</th>
-                                        <th>context</th>
-                                        <th>updateTime</th>
+                                        <th>职业名称</th>
+                                        <th>测试者</th>
+                                        <th>高匹配</th>
+                                        <th>未读报告</th>
+                                        <th>状态</th>
                                         <th></th>
                                     </tr>
                                 </thead>

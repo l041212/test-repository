@@ -21,5 +21,5 @@ class JobRequirement(Base):
     #技能
     skill = models.CharField(max_length=128, null=True, default=None)
     #职业信息ForeignKey
-    jobInfo = models.ForeignKey(JobInfo, on_delete=models.CASCADE)
+    jobInfo = models.OneToOneField(JobInfo, on_delete=models.CASCADE)
 

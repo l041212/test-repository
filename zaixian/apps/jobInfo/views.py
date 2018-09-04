@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+import json
+from apps.base.models import *
 from apps.jobInfo.services import *
 
 # Create your views here.
@@ -14,8 +16,19 @@ def table(request, action, id):
     }
     return render(request, 'jobInfo_table.html', context)
 
-def list(request):
-    return render(request, 'jobInfo_list.html')
+def list(request, page_limit):
+    context = {
+        'page_limit': page_limit if isNotNull(page_limit, 'str') else '3',
+        'page_number': '1',
+    }
+    return render(request, 'jobInfo_list.html', context)
+
+@mirror(JobInfo())
+def listData(request, entity, page_limit, page_number):
+    items = getJobInfoByFilter(entity)
+    page = SimplePage().writeSimplePage(items, page_limit, page_number)
+    page.page_object_list = json.dumps(rewriteJobInfoPageData(page.page_object_list))
+    return HttpResponse(json.dumps(reverse(page)), content_type='application/json')
 
 @mirror(JobInfo())
 def save(request, entity):

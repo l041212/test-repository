@@ -19,6 +19,7 @@ from apps.jobInfo.views import *
 app_name = 'jobInfo'
 urlpatterns = [
     url(r'^table/(?P<action>(read)|(write))/(?P<id>\d*)/?$', table),
-    url(r'^list/$', list),
+    url(r'^list/(?P<page_limit>\d*)/?$', list),
+    url(r'^listData/(?P<page_limit>\d*)/?(?P<page_number>\d*)/?$', listData),
     url(r'^save/$', save),
 ]

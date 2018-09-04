@@ -1,0 +1,61 @@
+{% extends 'login_frame.html' %}
+{% block header %}
+    <link rel="stylesheet" href="/static/style/jobInfo_table.css">
+    <script src="/static/script/jobInfo_table.js"></script>
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <h2>职业</h2>
+        <div class="card">
+            <div class="card-header">
+                <button class="btn btn-sm btn-primary" type="button" id="backBtn">返回</button>
+                <button class="btn btn-sm btn-primary" type="button" id="saveBtn">保存</button>
+            </div>
+            <div class="card-body">
+                <div class="card job-info">
+                    <form type="method">
+                        <div class="card-body">
+                            <h4 class="card-title">职业描述：</h4>
+                            <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+                            <input type="hidden" name="id" value="{{ jobInfo.id }}">
+                            <input type="hidden" name="status" value="{{ jobInfo.status }}">
+                            <input type="hidden" name="action" value="{{ action }}">
+                            <div class="form-group col-md-6">
+                                <label for="name">职业名称:</label>
+                                <input name="name" class="form-control" value="{{ jobInfo.name }}">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="property">职业属性:</label>
+                                <input type="hidden" name="property" value="{{ jobInfo.property }}">
+                                <select name="_property" class="form-control">
+                                    <option value=""></option>
+                                    <option value="1">客服类</option>
+                                    <option value="2">管理类</option>
+                                    <option value="3">市场类</option>
+                                    <option value="4">编辑类</option>
+                                    <option value="5">策划类</option>
+                                    <option value="6">销售类</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="rank">职业等级:</label>
+                                <input type="hidden" name="rank" value="{{ jobInfo.rank }}">
+                                <select name="_rank" class="form-control">
+                                    <option value=""></option>
+                                    <option value="1">S</option>
+                                    <option value="2">A</option>
+                                    <option value="3">B</option>
+                                    <option value="4">C</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="description">职业描述:</label>
+                                <textarea name="description" class="form-control">{{ jobInfo.description }}</textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

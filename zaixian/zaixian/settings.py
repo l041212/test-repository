@@ -72,7 +72,11 @@ ROOT_URLCONF = 'zaixian.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+<<<<<<< HEAD
         'DIRS': [os.path.join(BASE_DIR,"templates")],
+=======
+        'DIRS': [],
+>>>>>>> 0f66454e5bd17ae4133c11fc769183559dbd1b8d
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -97,8 +101,13 @@ DATABASES = {
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'USER': 'root',
+<<<<<<< HEAD
         'PASSWORD': '123',
         'NAME': 'test',
+=======
+        'PASSWORD': 'root',
+        'NAME': 'zaixian',
+>>>>>>> 0f66454e5bd17ae4133c11fc769183559dbd1b8d
     }
 }
 

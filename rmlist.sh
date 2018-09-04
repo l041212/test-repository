@@ -1,0 +1,16 @@
+rm -rf ./zaixian/.idea/
+rm -rf ./zaixian/apps/__pycache__/
+rm -rf ./zaixian/apps/base/__pycache__/
+rm -rf ./zaixian/apps/base/migrations/__pycache__/
+rm -rf ./zaixian/apps/jobInfo/__pycache__/
+rm -rf ./zaixian/apps/jobInfo/migrations/__pycache__/
+rm -rf ./zaixian/apps/jobModule/__pycache__/
+rm -rf ./zaixian/apps/jobModule/migrations/__pycache__/
+rm -rf ./zaixian/apps/jobRequirement/__pycache__/
+rm -rf ./zaixian/apps/jobRequirement/migrations/__pycache__/
+rm -rf ./zaixian/apps/login/__pycache__/
+rm -rf ./zaixian/apps/login/migrations/__pycache__/
+rm -rf ./zaixian/apps/testReport/__pycache__/
+rm -rf ./zaixian/apps/testReport/migrations/__pycache__/
+rm -rf ./zaixian/apps/utils/__pycache__/
+rm -rf ./zaixian/zaixian/__pycache__/

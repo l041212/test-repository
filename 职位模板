@@ -32,7 +32,6 @@ create table user(                   --用户表
   code varchar(32) default null comment '帐号名称',
   role varchar(16) default null comment '角色权限',    --['tester','admin','hr']
   email varchar(64) default null comment '邮箱地址',
-  status int(2) default null,       --[0,1,2]
   isDelete int(2) default false
 )
 
@@ -88,9 +87,10 @@ create table test(
   name varchar(32) default null comment '名称',
   user_id int(20) default null comment '用户id',
   job_id int(20) foreign key comment 'job表的外键',
-  match int(20) default null comment '匹配度',
+  match float default null comment '匹配度',
   attachment varchar(128) default null comemnt '附件',
   text varchar(1024) default null comment '文本',
+  status int(2) default null,       --[0,1,2]
   createTime datetime default null,
   updateTime datetime default null,
   createUser varchar(32) default null,

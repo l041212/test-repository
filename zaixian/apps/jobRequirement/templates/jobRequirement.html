@@ -1,10 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends 'login_frame.html' %}
+{% block header %}
+        <meta charset="UTF-8">
+        <title>jobRequirement</title>
+     <style>
+		#box3{
+			margin-left:0px;
+		}
+		#box3 p{
+			float:left;
+		}
+		#box3 #box4{
+			height:110px;
+			margin-top:0px;
+			border-bottom:1px solid;
+		}
+		#box3 #box4 #h3{
+			margin-bottom:45px;
+		}
+		#box3 #box5{
+			height:200px;
+			padding-top:20px;
+			border-bottom:1px solid;
+		}
+		#box3 #box6{
+			padding-top:20px;
+		}
+	</style>
+{% endblock %}
+{% block content%}
+		<div id='box3'>
+			<form>
+			<div id='box4'>
+				<dd><h3 id=h3>职位要求</h3></dd>
+				<dd>教育背景  &nbsp<input type="radio" name="education">专科<input type="radio" name="education">本科<input type="radio" name="education">硕士<input type="radio" name="education">博士
+			</div>
+			<div id='box5'>
+				<dd><p>经历</p> &nbsp<textarea cols=32 rows=3 name="experience"></textarea></dd><br/>
+				<dd>资历 &nbsp<input type="text" name="passTime"/></dd><br/>
+			</div>
+			<div id='box6'>
+				<dd><p>培训/证书</p> &nbsp<textarea cols=32 rows=3 name="certificate"></textarea></dd><br/>
+				<dd>专业知识 &nbsp<input type="text" name="major"/></dd><br/>
+				<dd><p>技能</p> &nbsp<textarea cols=32 rows=3 name="skill"></textarea></dd><br/>
+			</div>
+			</form>
+		</div>
+{% endblock %}

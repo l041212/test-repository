@@ -1,7 +1,7 @@
 {% extends 'login_frame.html' %}
 {% block header %}
 
-{% endblock %}
+{% end block %}
 {% block content %}
 <style>
 
@@ -105,9 +105,8 @@ ul {
   </li>
 </ul>
  </nav>
-<div link="name">
     <div id="content" style="background-color:#EEEEEE;height:400px;width:100%;float:left;">
-            <ol style="margin:auto;width:100%;border:10px solid #73AD21;padding:20px;">
+            <ol>
                 <ll><a href="name">王网</a> </ll>
                 <ll><a href="test">能力等级:2级</a> </ll>
                 <ll><a href="test">行为预测：中级</a> </ll>
@@ -116,13 +115,11 @@ ul {
                 <ll><a href="jobInfo_id">职业</a> </ll>
             </ol>
     </div>
-<form action="demo-form.php" method="get">
-  <input type="radio" name="sex" value="删除"> 删除<br>
-  <input type="radio" name="sex" value="保存" checked="checked">保存<br>
-  <input type="submit" value="提交">
-   <input type="reset" value="重置">
-</form>
-
-
+    <form action="demo-form.php" method="get">
+        <input type="radio" name="sex" value="删除"> 删除<br>
+        <input type="radio" name="sex" value="保存" checked="checked">保存<br>
+        <input type="submit" value="提交">
+        <input type="reset" value="重置">
+    </form>
 </body>
 {% endblock %}

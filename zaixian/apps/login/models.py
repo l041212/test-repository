@@ -2,7 +2,7 @@ from django.db import models
 from apps.base.models import Base
 
 # Create your models here.
-class UserA(Base):
+class User(Base):
     # id = models.AutoField(auto_created=True, primary_key=True, serialize=, verbose_name='ID'),
     #用户名称
     name = models.CharField(max_length=32, null=True, default=None)
@@ -13,7 +13,7 @@ class UserA(Base):
     #用户邮箱
     email = models.CharField(max_length=64, null=True, default=None)
     #用户密码
-    passwd=models.CharField(max_length=100,null=True)
+    password = models.CharField(max_length=100,null=True)
     class Meta(object):
         db_table = 'apps_User'
     # def create(self,email,passwd):

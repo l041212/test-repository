@@ -26,3 +26,4 @@ def save(request, entity):
     print(entity.name)
     print(entity.text)
     return HttpResponse("success")
+

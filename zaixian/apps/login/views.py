@@ -1,6 +1,6 @@
 # from django.shortcuts import render
 from django.shortcuts import render,redirect,reverse
-from .models import UserA
+from .models import User
 from django.http import HttpResponse
 # Create your views here.
 def login(request):
@@ -11,13 +11,13 @@ def zhuce(request):
    context={}
    email = request.POST.get("email")
    passwd = request.POST.get("passwd")
-   all_list = UserA.objects.all()
+   all_list = User.objects.all()
    for i in all_list:
       # if i.email==email:
       #    context["info"] = "该邮箱已注册！！"
       #    return render(request,'register.html',context)
       if i.email != email:
-         user = UserA()
+         user = User()
          user.objects.create(email=email, passwd=passwd)
          #
          # user.create(email,passwd)

@@ -1,0 +1,69 @@
+{% extends 'login_frame.html' %}
+{% block header %}
+    <title>测试报告</title>
+    <meta charset="utf-8">
+    <style>
+        #table{
+            width: 800px;
+
+            background-color: #ff3d3d;
+        }
+        #table .table1{
+            width: 700px;
+            border: 2px;
+            background-color: #00bc6f;
+    }
+    </style>
+    <script language="JavaScript">
+        $(document).ready(
+            function(){
+            document.getElementById("table1").innerHTML = "text";
+            $.ajax({
+                url:"",
+                type:"",
+
+            });
+        });
+    </script>
+{% endblock %}
+{% block content %}
+    <div style = "text-align:right;">
+        <button >注销</button>
+    </div>
+    <div>
+        <div>
+            <h1>测试报告</h1>
+            <button>导出列表</button>
+            <button><a href="test_new.html">新增</a></button>
+
+        </div>
+
+    <div id="table" >
+        <div style = "text-align:right;">
+            <select name="choice">
+                <option>--筛选--</option>
+                <option>按名称</option>
+                <option>按时间</option>
+            </select>
+        </div>
+        <div>
+        <table id="table1">
+
+            <tr>
+                <th>姓名</th>
+                <th>上传日期</th>
+                <th>职务</th>
+                <th>匹配度</th>
+                <th>测试状态</th>
+            </tr>
+            <tr>
+                <td>余华能</td>
+                <td>2018.8.8</td>
+                <td>游戏A研发</td>
+                <td>90%</td>
+                <td>报告未读</td>
+            </tr>
+        </table>
+    </div>
+    </div>
+{% endblock %}

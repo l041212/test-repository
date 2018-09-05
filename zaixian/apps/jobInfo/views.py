@@ -4,8 +4,6 @@ import json
 from apps.base.models import *
 from apps.jobInfo.services import *
 
-# Create your views here.
-
 def table(request, action, id):
     user = User.objects.all()[0]
     request.session['user_id'] = user.id

@@ -7,8 +7,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <!-- //for-mobile-apps -->
+    <!--
     <link href="static/style.css" rel="stylesheet" type="text/css" media="all" />
-
+    -->
 </head>
 <body>
     <!-- main -->
@@ -17,12 +18,16 @@
             后台注册
         </h1>
 
-        <p>{{info}}</p>
+        <p>{{info}}</p></br>
 
-        <form method="post" action="/login/zhuce/">
-            {%csrf_token%}
-            <input type="text" value=" 邮箱" name="email" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '用户名';}" required=""></br>
-            <input type="password" value="Password" name="passwd" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '';}" required=""></br>
+        <form method="post" action="/login/register_handler/">
+
+
+            <input type="text" value="" name="name" >请输入用户名</br>
+            <input type="text" value="" name="code" >请输入账号名</br>
+            <input type="text" value="" name="role" >请输入角色名</br>
+            <input type="text" value="" name="email" >请输入邮箱</br>
+            <input type="password" value="" name="password" >请输入密码</br>
             <input type="submit" value="注册">
         </form>
     </div>

@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from apps.testReport.views import *
+
 app_name = 'testReport'
 urlpatterns = [
     url(r'^test_new/$',test_new),
     url(r'^test/$',test),
     url(r'^test_choice/$', test_choice),
-    ]
+]

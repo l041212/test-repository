@@ -13,9 +13,11 @@ def login(request):
 def login_handler(request):
 
    email = request.POST.get("email")
-   password = request.POST.get("password")
-   isChecked=request.POST.get('is_checked')
- 
+   passwd = request.POST.get("password")
+
+
+
+
 def register(request):
       context={}
       return render(request, 'register.html', context)

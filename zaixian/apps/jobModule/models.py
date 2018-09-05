@@ -1,7 +1,8 @@
 from django.db import models
+from apps.base.models import *
 
 # Create your models here.
-class JobModule(models.Model):
+class JobModule(Base):
 
         class Meta(object):
                 db_table = 'apps_JobModule'

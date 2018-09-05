@@ -8,8 +8,8 @@ from apps.jobInfo.services import getJobInfoById
 # Create your views here.
 
 def edit(request, jobInfo_id, id):
-    user = User.objects.all()[0]
-    request.session['user_id'] = user.id
+    #user = User.objects.all()[0]
+    #request.session['user_id'] = user.id
     context = {
         'jobInfo_id': jobInfo_id,
         'id': id if isNotNull(id, 'str') else '',

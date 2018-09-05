@@ -16,16 +16,13 @@ Including another URLconf
 from django.conf.urls import url
 from django.urls import path
 from django.contrib import admin
-
-
-
 from apps.login.views import *
 
 app_name = 'login'
 urlpatterns = [
-    #path = ('admin/',admin.site.urls),
-    url(r'^login/$',login,name="login"),
+    # path = ('admin/',admin.site.urls),
+    url(r'^login/$',login),
     url(r'^register/$',register),
-    url(r"zhuce/",zhuce,name="zhuce")
+    url(r'^register_handler/$',register_handler)
 
 ]

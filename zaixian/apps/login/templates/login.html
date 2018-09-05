@@ -17,11 +17,19 @@
             后台登录
         </h1>
         <form>
-            <input type="text" value=" 邮箱" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '用户名';}"
-                   required=""></form></br>
-            <input type="password" value="Password" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '';}"
-                   required=""></br>
+
+            <input type="text" value="" name="email" >请输入邮箱</br>
+            <div class="email_error">邮箱输入错误</div>
+            <required=""></br>
+            <input type="password" value="" name="passwd" >请输入密码</br>
+            <div class="password_error">密码输入错误</div>
+            <required=""></br>
+            <div class="more_input clearfix">
+                <input type="checkbox" name="is_checked"></div>
             <input type="submit" value="登录">
+
+        </form>
+
         </form>
     </div>
 

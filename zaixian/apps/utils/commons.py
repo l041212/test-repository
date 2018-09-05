@@ -34,9 +34,6 @@ def reverse(set):
     dict = {}
     for key in set.__dict__:
         dict[key] = str(set.__getattribute__(key))
-<<<<<<< HEAD
-    return dict
-=======
     return dict
 
 def writeFlowInfo(entity, type):
@@ -52,4 +49,3 @@ def isNotNull(value, type):
     if type == 'str':
         return value != None and str(value).strip() != ''
     return False
->>>>>>> 0f66454e5bd17ae4133c11fc769183559dbd1b8d

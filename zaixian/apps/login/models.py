@@ -13,7 +13,8 @@ class User(Base):
     #用户邮箱
     email = models.CharField(max_length=64, null=True, default=None)
     #用户密码
-    password = models.CharField(max_length=100,null=True)
+    password=models.CharField(max_length=100,null=True)
+
     class Meta(object):
         db_table = 'apps_User'
     # def create(self,email,passwd):

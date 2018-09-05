@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+
 def test(request):
     return render(request,'test.html')
 
@@ -10,4 +11,3 @@ def test_choice(request):
 
 def test_new(request):
     return render(request,'test_new.html')
-# Create your views here.

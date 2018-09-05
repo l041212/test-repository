@@ -7,6 +7,7 @@ from apps.jobInfo.services import getJobInfoById
 
 # Create your views here.
 
+
 def edit(request, jobInfo_id, id):
     #user = User.objects.all()[0]
     #request.session['user_id'] = user.id

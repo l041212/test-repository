@@ -49,6 +49,16 @@ function initSelectorChange(){
     });
 }
 
+function updateBtnListener(){
+    $("[name='itemUpdateBtn']").each(function(){
+        $(this).on("click",function(){
+            var id=$(this).parent().parent().find("[name='id']").attr("value");
+            var url="/jobInfo/table/write/"+id+"/";
+            window.location.href=url;
+        });
+    });
+}
+
 function constructJobInfoTable(data){
     var tbody=$("#table #card-body-conent tbody");
     tbody.html("");
@@ -80,5 +90,8 @@ function constructJobInfoTable(data){
     }
     initTableIdentityCheckBox($("#table table")[0]);
     initTableHandlerButton($("#table table")[0]);
-    initPaginator($("#tail")[0],data,function(){$("#searchBtn").trigger("click");});
+    updateBtnListener();
+    initPaginator($("#tail")[0],data,function(){
+        $("#searchBtn").trigger("click");
+    });
 }

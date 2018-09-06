@@ -31,12 +31,33 @@ function saveBtnListener(){
             async:false,
             success:
                 function(data){
+                    if(data=="True"){
+                        $(".alert-success").addClass("active");
+                        if($("[name='id']").val()!=undefined&&$("[name='id']").val()!=""){
+                            setTimeout(function(){
+                                $(".alert-success").removeClass("active");
+                            },2000);
+                        }else{
+                            setTimeout(function(){
+                                $("#backBtn").trigger("click");
+                            },1000);
+                        }
+                    }else{
+                        $(".alert-danger").addClass("active");
+                        setTimeout(function(){
+                            $(".alert-danger").removeClass("active");
+                        },2000);
+                    }
                     console.log(data);
             },
             error:
                 function(xhr){
                     if(xhr.status!='200'){
-                        console.log(xhr);
+                        $(".alert-danger").addClass("active");
+                        setTimeout(function(){
+                            $(".alert-danger").removeClass("active");
+                        },2000);
+                        console.log(xhr.status);
                     }
                 }
         });

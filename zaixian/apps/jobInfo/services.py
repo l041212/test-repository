@@ -15,6 +15,8 @@ def getJobInfoById(id):
 def getJobInfoByFilter(entity):
     cursor = connection.cursor()
     query = ""
+    where = ""
+    order_by = ""
     query += "select t1.id,t1.name,t1.status,ifnull(t2.id_count,0),ifnull(t3.match_count,0),ifnull(t4.status_count,0) from "
     query += "(select id,name,status,updateTime,isDelete from apps_JobInfo) t1 "
     query += "left join "
@@ -29,8 +31,18 @@ def getJobInfoByFilter(entity):
     query += "(select jobInfo_id,count(jobInfo_id) as status_count "
     query += "from apps_TestReport where status = 0 group by jobInfo_id) t4 "
     query += "on t1.id = t4.jobInfo_id "
-    cursor.execute(query)
+    where += "t1.name like '%%%%%s%%%%' " % entity.name if isNotNull(entity.name, 'str') else ""
+    where += "and " if isNotNull(where, 'str') and isNotNull(entity.status, 'str') else ""
+    where += "t1.status = %s " % entity.status if isNotNull(entity.status, 'str') else ""
+    where += "and " if isNotNull(where, 'str') else ""
+    where += "t1.isDelete = '0' "
+    where = "where "+where
+    order_by += "t1.updateTime desc "
+    order_by = "order by "+order_by
+    cursor.execute(query+where+order_by)
     items = cursor.fetchall()
+    print(query)
+    print(items)
     return items
 
 def rewriteJobInfoPageData(pageList):

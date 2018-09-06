@@ -3,3 +3,35 @@
     background-color: white;
     height: 30px;
 }
+
+.card{
+    margin-top: 2%;
+}
+
+.card-header{
+    white-space: nowrap;
+}
+
+#searchBtn{
+    float:right;
+}
+
+#card-body-menu{
+    padding-bottom: 5px;
+}
+
+.tableItemBtn{
+    margin-right: 5px;
+}
+
+.table thead th {
+    white-space: nowrap;
+}
+
+.table tbody tr td:last-child{
+    white-space: nowrap;
+}
+
+.pagination{
+    float: right;
+}

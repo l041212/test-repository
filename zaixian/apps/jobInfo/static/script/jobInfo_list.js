@@ -7,6 +7,7 @@ $(document).ready(function(){
 });
 
 function createBtnListener(){
+    $("#createBtn").text("新建");
     $("#createBtn").on("click",function(){
         window.location.href="/jobInfo/table/write/";
     });
@@ -38,6 +39,7 @@ function searchBtnListener(){
         });
      };
     construct();
+    $("#searchBtn").text("查询");
     $("#searchBtn").on("click",function(){
         construct();
     });
@@ -74,6 +76,7 @@ function deleteBtnListener(){
                     }
         });
     };
+    $("#deleteBtn").text("删除");
     $("#deleteBtn").on("click",function(){
         var parameters=new Object();
         var ids=new Array();
@@ -85,6 +88,7 @@ function deleteBtnListener(){
             request(path,parameters);
         }
     });
+    $("[name='itemDeleteBtn']").text("删除");
     $("[name='itemDeleteBtn']").each(function(){
         $(this).on("click",function(){
             var id=$(this).parent().parent().find("[name='id']").attr("value");
@@ -99,11 +103,12 @@ function deleteBtnListener(){
     });
 }
 
-function updateBtnListener(){
+function updateBtnListener(type,text){
+    $("[name='itemUpdateBtn']").text(text);
     $("[name='itemUpdateBtn']").each(function(){
         $(this).on("click",function(){
             var id=$(this).parent().parent().find("[name='id']").attr("value");
-            var url="/jobInfo/table/write/"+id+"/";
+            var url="/jobInfo/table/"+type+"/"+id+"/";
             window.location.href=url;
         });
     });
@@ -125,11 +130,20 @@ function initTesterStatus(){
     });
 }
 
+function userRoleReWrite(){
+    var role=$("[name='user_role']").val();
+    if(role!="hr"&&role!="admin"){
+        $("#createBtn").remove();
+        $("#deleteBtn").remove();
+        $("[name='itemDeleteBtn']").remove();
+        updateBtnListener("read","查看");
+    }
+}
+
 function constructJobInfoTable(data){
     var tbody=$("#table #card-body-conent tbody");
     tbody.html("");
     var pageObjectList=JSON.parse(data["page_object_list"]);
-    console.log(pageObjectList);
     for(var i=0;i<pageObjectList.length;i++){
         var tr=document.createElement("tr");
         tbody.append(tr);
@@ -157,8 +171,9 @@ function constructJobInfoTable(data){
     }
     initTableIdentityCheckBox($("#table table")[0]);
     initTableHandlerButton($("#table table")[0]);
-    updateBtnListener();
+    updateBtnListener('write', '编辑');
     initTesterStatus();
+    userRoleReWrite();
     initPaginator($("#tail")[0],data,function(){
         $("#searchBtn").trigger("click");
     });

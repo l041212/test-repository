@@ -16,7 +16,7 @@ def table(request, action, id):
 
 def list(request, page_limit):
     context = {
-        'page_limit': page_limit if isNotNull(page_limit, 'str') else '3',
+        'page_limit': page_limit if isNotNull(page_limit, 'str') else '25',
         'page_number': '1',
     }
     return render(request, 'jobInfo_list.html', context)
@@ -31,4 +31,10 @@ def listData(request, entity, page_limit, page_number):
 @mirror(JobInfo())
 def save(request, entity):
     flag = saveJobInfo(request, entity)
+    return HttpResponse(flag)
+
+def delete(request):
+    flag = True
+    for id in request.POST.getlist("ids[]", []):
+        flag &= deleteJobInfoById(request, id)
     return HttpResponse(flag)

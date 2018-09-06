@@ -35,3 +35,7 @@
 .pagination{
     float: right;
 }
+
+.table tbody .td_status{
+    white-space: nowrap;
+}

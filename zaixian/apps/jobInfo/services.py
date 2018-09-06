@@ -41,8 +41,6 @@ def getJobInfoByFilter(entity):
     order_by = "order by "+order_by
     cursor.execute(query+where+order_by)
     items = cursor.fetchall()
-    print(query)
-    print(items)
     return items
 
 def rewriteJobInfoPageData(pageList):
@@ -59,10 +57,7 @@ def rewriteJobInfoPageData(pageList):
     return list
 
 def saveJobInfo(request, entity):
-    user = User.objects.filter(pk=request.session['user_id'])[0]
-    entity = writeFlowInfo(entity, JobInfo)
-    entity.updateUser = user.id
-    entity.createUser = entity.createUser if isNotNull(entity.createUser, 'str') else user.id
+    entity = writeFlowInfoSimple(request, entity, User, JobInfo)
     entity.status = entity.status if isNotNull(entity.status, 'str') else '0'
     try:
         entity.save()
@@ -70,3 +65,15 @@ def saveJobInfo(request, entity):
     except Exception as e:
         print(e)
         return False
+
+def deleteJobInfoById(request, id):
+    entity = JobInfo.objects.filter(pk=id)[0]
+    entity = writeFlowInfoSimple(request, entity, User, JobInfo)
+    entity.isDelete = True
+    try:
+        entity.save()
+        return True
+    except Exception as e:
+        print(e)
+        return False
+

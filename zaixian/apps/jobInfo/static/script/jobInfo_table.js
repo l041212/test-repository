@@ -38,6 +38,7 @@ function saveBtnListener(){
                                 $(".alert-success").removeClass("active");
                             },2000);
                         }else{
+                            $("#saveBtn").remove();
                             setTimeout(function(){
                                 $("#backBtn").trigger("click");
                             },1000);

@@ -9,3 +9,7 @@
 #frame_menu #frame_menu_top {
     height: 120px;
 }
+
+.nav-item .active {
+    color: darkblue;
+}

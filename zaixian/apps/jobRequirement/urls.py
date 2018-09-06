@@ -14,9 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.conf.urls import url
-from apps.jobRequirement.views import jobRequirement
+from apps.jobRequirement.views import *
 
 app_name = 'jobRequirement'
 urlpatterns = [
-    url(r'jobRequirement/',jobRequirement)
+    url(r'edit/(?P<jobInfo_id>\d+)(/(?P<id>\d*))?/?$', edit),
+    url(r'save/?$', save),
+
 ]

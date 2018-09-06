@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^list/(?P<page_limit>\d*)/?$', list),
     url(r'^listData/(?P<page_limit>\d*)/?(?P<page_number>\d*)/?$', listData),
     url(r'^save/$', save),
+    url(r'^delete/$', delete),
 ]

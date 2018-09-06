@@ -1,0 +1,64 @@
+-- MySQL dump 10.13  Distrib 8.0.12, for linux-glibc2.12 (x86_64)
+--
+-- Host: localhost    Database: zaixian
+-- ------------------------------------------------------
+-- Server version	8.0.12
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+ SET NAMES utf8mb4 ;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `apps_TestReport`
+--
+
+DROP TABLE IF EXISTS `apps_TestReport`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `apps_TestReport` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `createUser` varchar(32) DEFAULT NULL,
+  `updateUser` varchar(32) DEFAULT NULL,
+  `createTime` datetime(6) DEFAULT NULL,
+  `updateTime` datetime(6) DEFAULT NULL,
+  `status` varchar(16) DEFAULT NULL,
+  `isDelete` tinyint(1) DEFAULT NULL,
+  `name` varchar(32) DEFAULT NULL,
+  `match` decimal(5,2) DEFAULT NULL,
+  `text` varchar(1024) DEFAULT NULL,
+  `attachment` varchar(100) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `jobInfo_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `apps_TestReport_jobInfo_id_a302f2ac_fk_apps_JobInfo_id` (`jobInfo_id`),
+  CONSTRAINT `apps_TestReport_jobInfo_id_a302f2ac_fk_apps_JobInfo_id` FOREIGN KEY (`jobInfo_id`) REFERENCES `apps_JobInfo` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `apps_TestReport`
+--
+
+LOCK TABLES `apps_TestReport` WRITE;
+/*!40000 ALTER TABLE `apps_TestReport` DISABLE KEYS */;
+INSERT INTO `apps_TestReport` VALUES (1,'1','1','2018-09-04 01:41:27.479000','2018-09-04 01:41:35.245000','0',0,NULL,0.00,NULL,NULL,2,4),(2,'1','1','2018-09-04 01:41:56.561000','2018-09-04 01:42:02.652000','1',0,NULL,10.10,NULL,NULL,3,4),(3,'1','1','2018-09-04 01:42:07.579000','2018-09-04 01:42:10.546000','1',0,NULL,30.25,NULL,NULL,4,4),(4,'1','1','2018-09-04 01:42:15.181000','2018-09-04 01:42:19.585000','2',0,NULL,50.34,NULL,NULL,5,4),(5,'1','1','2018-09-04 01:42:24.298000','2018-09-04 01:42:27.051000','2',0,NULL,70.75,NULL,NULL,6,4),(6,'1','1','2018-09-04 01:42:32.491000','2018-09-04 01:42:35.738000','0',0,NULL,0.00,NULL,NULL,7,4),(7,'1','1','2018-09-04 01:42:42.479000','2018-09-04 01:42:45.645000','0',0,NULL,0.00,NULL,NULL,8,4),(8,'1','1','2018-09-04 01:43:32.218000','2018-09-04 01:43:37.918000','0',0,NULL,0.00,NULL,NULL,9,5),(9,'1','1','2018-09-04 01:43:40.875000','2018-09-04 01:43:42.896000','0',0,NULL,0.00,NULL,NULL,10,5),(10,'1','1','2018-09-04 01:43:49.309000','2018-09-05 01:43:52.501000','0',0,NULL,0.00,NULL,NULL,11,5);
+/*!40000 ALTER TABLE `apps_TestReport` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2018-09-06 17:07:09

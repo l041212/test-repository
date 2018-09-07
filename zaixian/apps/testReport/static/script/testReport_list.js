@@ -4,7 +4,6 @@ $(document).ready(function(){
     createBtnListener();
     searchBtnListener();
     initSelectorChange();
-    deleteBtnListener();
 });
 
 function initNavigator(){
@@ -48,9 +47,11 @@ function searchBtnListener(){
         });
      };
     construct();
+    deleteBtnListener();
     $("#searchBtn").text("查询");
     $("#searchBtn").on("click",function(){
         construct();
+        deleteBtnListener();
     });
 }
 

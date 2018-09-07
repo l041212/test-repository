@@ -1,0 +1,65 @@
+{% extends 'login_frame.html' %}
+{% block header %}
+    <link rel="stylesheet" href="/static/style/testReport_edit.css">
+    <script src="/static/script/testReport_edit.js"></script>
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <h2>测试</h2>
+        <div class="card">
+            <div class="card-header">
+                <button class="btn btn-sm btn-primary" type="button" id="backBtn">返回</button>
+                <button class="btn btn-sm btn-primary" type="button" id="saveBtn">保存</button>
+                <div class="alert alert-success">数据已经保存...</div>
+                <div class="alert alert-danger">数据保存失败...</div>
+            </div>
+            <div class="card-body">
+                <div class="card testReport">
+                    <form type="method">
+                        <div class="card-body">
+                            <h4 class="card-title">测试报告：</h4>
+                            <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+                            <input type="hidden" name="id" value="{{ testReport.id }}">
+                            <input type="hidden" name="user_id" value="{{ user.id }}">
+                            <input type="hidden" name="jobInfo_id" value="{{ jobInfo.id }}">
+                            <input type="hidden" name="action" value="{{ action }}">
+                            <div class="form-group col-md-6">
+                                <label>测试者:</label>
+                                <span>{{ user.name }}</span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>职业名称:</label>
+                                <span>{{ jobInfo.name }}</span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="name">报告名称:</label>
+                                <input name="name" class="form-control" value="{{ testReport.name }}">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="match">匹配度:</label>
+                                <input type="number" name="match" class="form-control" value="{{ testReport.match }}" min="0" max="100">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="status">状态:</label>
+                                <input type="hidden" name="status" class="form-control" value="{{ testReport.status }}">
+                                <select name="_status" class="form-control">
+                                    <option value="0">未读</option>
+                                    <option value="1">淘汰</option>
+                                    <option value="2">候选</option>
+                                </select>
+                            </div>
+                            <div style="display: none" class="form-group col-md-6">
+                                <label for="attachment">测试附件:</label>
+                                <input type="file" id="attachment" name="attachment" class="form-control" value="{{ testReport.attachment }}">
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="rank">测试文本:</label>
+                                <textarea name="text" class="form-control" rows="7">{{ testReport.text }}</textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -21,4 +21,6 @@ urlpatterns = [
     url(r'^test_new/$',test_new),
     url(r'^test/$',test),
     url(r'^test_choice/$', test_choice),
+    url(r'^edit/(?P<action>(read)|(write))/(?P<id>\d+)/?$', edit),
+    url(r'^save/?$', save),
 ]

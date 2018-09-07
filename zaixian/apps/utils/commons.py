@@ -54,5 +54,5 @@ def writeFlowInfoSimple(request, entity, userType, entityType):
 
 def isNotNull(value, type):
     if type == 'str':
-        return value != None and str(value).strip() != ''
+        return value != None and value != 'None' and str(value).strip() != ''
     return False

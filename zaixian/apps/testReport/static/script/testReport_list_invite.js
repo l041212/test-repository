@@ -132,7 +132,7 @@ function userRoleReWrite(){
         $("#createBtn").remove();
         $("#deleteBtn").remove();
         $("[name='itemDeleteBtn']").remove();
-        updateBtnListener("read","查看");
+        $("[name='itemUpdateBtn']").remove();
     }
 }
 

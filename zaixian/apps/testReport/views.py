@@ -19,8 +19,6 @@ def test_new(request):
     return render(request,'test_new.html')
 
 def edit(request, action, id):
-    user = User.objects.all()[0]
-    request.session['user_id'] = user.id
     testReport = getTestReportById(id)
     context = {
         'action': action,
@@ -32,8 +30,6 @@ def edit(request, action, id):
     return render(request, 'testReport_edit.html', context)
 
 def list(request, page_limit):
-    user = User.objects.all()[0]
-    request.session['user_id'] = user.id
     context = {
         'page_limit': page_limit if isNotNull(page_limit, 'str') else '10',
         'page_number': '1',
@@ -42,8 +38,6 @@ def list(request, page_limit):
     return render(request, 'testReport_list.html', context)
 
 def list_invite(request, page_limit):
-    user = User.objects.all()[0]
-    request.session['user_id'] = user.id
     context = {
         'page_limit': page_limit if isNotNull(page_limit, 'str') else '10',
         'page_number': '1',

@@ -6,8 +6,6 @@ from apps.jobInfo.services import *
 from apps.login.services import *
 
 def table(request, action, id):
-    user = User.objects.all()[0]
-    request.session['user_id'] = user.id
     context = {
         'action': action,
         'id': id if isNotNull(id, 'str') else None,
@@ -16,8 +14,6 @@ def table(request, action, id):
     return render(request, 'jobInfo_table.html', context)
 
 def list(request, page_limit):
-    user = User.objects.all()[0]
-    request.session['user_id'] = user.id
     context = {
         'page_limit': page_limit if isNotNull(page_limit, 'str') else '10',
         'page_number': '1',

@@ -1,20 +1,29 @@
 
 $(document).ready(function(){
+    initNavigator();
     createBtnListener();
     searchBtnListener();
     initSelectorChange();
 });
 
+function initNavigator(){
+    $(".collapse").removeClass("show");
+    $(".nav-link").removeClass("active");
+    $("#collapseTwo").addClass("show");
+    $("#collapseTwo .nav-link:eq(1)").addClass("active");
+}
+
 function createBtnListener(){
-    $("#createBtn").text("新建");
+    $("#createBtn").text("测试邀请");
     $("#createBtn").on("click",function(){
-        window.location.href="/jobInfo/table/write/";
+
     });
+    $("#createBtn").remove();
 }
 
 function searchBtnListener(){
     var construct=function(){
-        var path="/jobInfo/listData/";
+        var path="/testReport/listData/";
         path+=$("input[name='page_limit']:eq(0)").val()+"/";
         path+=$("input[name='page_number']:eq(0)").val()+"/";
         var parameters=$("form").serialize();
@@ -54,7 +63,7 @@ function initSelectorChange(){
 }
 
 function deleteBtnListener(){
-    var path="/jobInfo/delete/";
+    var path="/testReport/delete/";
     var request=function(path,parameters){
         $.ajax({
                 url:path,
@@ -66,7 +75,7 @@ function deleteBtnListener(){
                 success:
                     function(data){
                         if(data=="True"){
-                            location.href="/jobInfo/list/";
+                            location.href="/testReport/list/";
                         }
                 },
                 error:
@@ -109,7 +118,7 @@ function updateBtnListener(type,text){
     $("[name='itemUpdateBtn']").each(function(){
         $(this).on("click",function(){
             var id=$(this).parent().parent().find("[name='id']").attr("value");
-            var url="/jobInfo/table/"+type+"/"+id+"/";
+            var url="/testReport/edit/"+type+"/"+id+"/";
             window.location.href=url;
         });
     });
@@ -119,13 +128,13 @@ function initTesterStatus(){
     $("table:eq(0) tbody tr").each(function(){
         switch ($(this).find("td:eq(5)").text()){
             case "0":
-                $(this).find("td:eq(5)").text("测试中");
+                $(this).find("td:eq(5)").text("未读");
                 break;
             case "1":
-                $(this).find("td:eq(5)").text("生成中");
+                $(this).find("td:eq(5)").text("淘汰");
                 break;
             case "2":
-                $(this).find("td:eq(5)").text("已生成");
+                $(this).find("td:eq(5)").text("候选");
                 break;
         }
     });
@@ -153,16 +162,16 @@ function constructJobInfoTable(data){
         td.innerText=pageObjectList[i]['id'];
         var td=document.createElement("td");
         tr.append(td);
-        td.innerText=pageObjectList[i]['name'];
+        td.innerText=pageObjectList[i]['user_name'];
         var td=document.createElement("td");
         tr.append(td);
-        td.innerText=pageObjectList[i]['id_count'];
+        td.innerText=pageObjectList[i]['createTime'];
         var td=document.createElement("td");
         tr.append(td);
-        td.innerText=pageObjectList[i]['match_count'];
+        td.innerText=pageObjectList[i]['jobInfo_name'];
         var td=document.createElement("td");
         tr.append(td);
-        td.innerText=pageObjectList[i]['status_count'];
+        td.innerText=pageObjectList[i]['match']+"%";
         var td=document.createElement("td");
         tr.append(td);
         td.setAttribute("class","td_status");

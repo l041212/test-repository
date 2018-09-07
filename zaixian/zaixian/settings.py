@@ -63,7 +63,7 @@ MIDDLEWARE = [
 ]
 
 MIDDLEWARELIST = [
-
+    'apps.middleware.signin.loginMiddleWare'
 ]
 
 MIDDLEWARE += MIDDLEWARELIST

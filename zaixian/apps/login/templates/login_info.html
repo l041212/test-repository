@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block head %}
+    <link rel="stylesheet" href="/static/style/login_info.css">
+    <script src="/static/script/login_info.js"></script>
+{% endblock %}
+{% block body %}
+    <div class="container">
+        <form action="/login/signin/" method="post">
+            {% csrf_token %}
+            <div id="content" class="card col-md-4">
+                <p class="card-header">用户登录...</p>
+                <input type="hidden" name="id">
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="code">账户名:</label>
+                        <input name="code" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">密码:</label>
+                        <input name="password" class="form-control">
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button id="loginSubmitBtn" type="submit" class="btn btn-primary">确认</button>
+                    <button id="resetBtn" type="reset" class="btn btn-primary">重置</button>
+                    <button id="registerBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#registerModal">注册</button>
+                </div>
+            </div>
+        </form>
+        <div class="modal fade" id="registerModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" id="registerLabel">用户注册...</h4>
+                    </div>
+                    <div class="modal-body"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button id="registerSubmitBtn" type="button" class="btn btn-primary">确认</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

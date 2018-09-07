@@ -37,6 +37,9 @@ function searchBtnListener(){
         });
      };
     construct();
+    $("#searchBtn").on("click",function(){
+        construct();
+    });
 }
 
 function updateBtnListener(type,text){

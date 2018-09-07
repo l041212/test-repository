@@ -35,7 +35,7 @@ def list(request, page_limit):
     user = User.objects.all()[0]
     request.session['user_id'] = user.id
     context = {
-        'page_limit': page_limit if isNotNull(page_limit, 'str') else '25',
+        'page_limit': page_limit if isNotNull(page_limit, 'str') else '10',
         'page_number': '1',
         'user': getUserById(request.session['user_id'])
     }
@@ -45,7 +45,7 @@ def list_invite(request, page_limit):
     user = User.objects.all()[0]
     request.session['user_id'] = user.id
     context = {
-        'page_limit': page_limit if isNotNull(page_limit, 'str') else '25',
+        'page_limit': page_limit if isNotNull(page_limit, 'str') else '10',
         'page_number': '1',
         'user': getUserById(request.session['user_id'])
     }

@@ -21,4 +21,6 @@ urlpatterns = [
     url(r'^edit/(?P<jobInfo_id>\d+)(/(?P<id>\d+))?/?$', edit),
     url(r'^save/?$', save),
     url(r'^lol/?$',lol),
+    url(r'^show/$',list,),
+    url(r'^show/$',yaya),
 ]

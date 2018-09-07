@@ -145,10 +145,12 @@ ul {
     </form>
     <div>
         <form action="/jobModule/lol/" method="post">
+            {% csrf_token %}
             <p><input name="name"/></p>
             <p><input name="text"/></p>
             <p><input name="attachment"></p>
-            <p><input type="submit" value="submit"/></p>
+            <p><input name="jobInfo_id"></p>
+            <p><input type="submit" value="保存数据进数据库"/></p>
         </form>
     </div>
 </body>

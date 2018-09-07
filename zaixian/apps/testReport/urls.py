@@ -26,4 +26,6 @@ urlpatterns = [
     url(r'^list/(?P<page_limit>\d*)/?$', list),
     url(r'^listData/(?P<page_limit>\d*)/?(?P<page_number>\d*)/?$', listData),
     url(r'^delete/$', delete),
+    url(r'^list_invite/(?P<page_limit>\d*)/?$', list_invite),
+    url(r'^save_invite/?$', save_invite),
 ]

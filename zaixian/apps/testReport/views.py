@@ -41,9 +41,26 @@ def list(request, page_limit):
     }
     return render(request, 'testReport_list.html', context)
 
+def list_invite(request, page_limit):
+    user = User.objects.all()[0]
+    request.session['user_id'] = user.id
+    context = {
+        'page_limit': page_limit if isNotNull(page_limit, 'str') else '25',
+        'page_number': '1',
+        'user': getUserById(request.session['user_id'])
+    }
+    return render(request, 'testReport_list_invite.html', context)
+
 @mirror(TestReport())
 def save(request, entity):
     flag = saveTestReport(request, entity)
+    return HttpResponse(flag)
+
+def save_invite(request):
+    flag = True
+    jobInfo_id = request.POST["jobInfo_id"]
+    for user_id in request.POST.getlist("users_id[]", []):
+        flag &= saveTestReportByUnTester(request, jobInfo_id, user_id)
     return HttpResponse(flag)
 
 @mirror(TestReport())

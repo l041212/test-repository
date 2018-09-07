@@ -1,16 +1,25 @@
 
 $(document).ready(function(){
+    initNavigator();
     createBtnListener();
     searchBtnListener();
     initSelectorChange();
     deleteBtnListener();
 });
 
+function initNavigator(){
+    $(".collapse").removeClass("show");
+    $(".nav-link").removeClass("active");
+    $("#collapseTwo").addClass("show");
+    $("#collapseTwo .nav-link:eq(1)").addClass("active");
+}
+
 function createBtnListener(){
     $("#createBtn").text("测试邀请");
     $("#createBtn").on("click",function(){
 
     });
+    $("#createBtn").remove();
 }
 
 function searchBtnListener(){

@@ -1,8 +1,10 @@
-# from django.shortcuts import render
 from django.shortcuts import render,redirect,reverse
 from .models import User
 from django.http import HttpResponse
 from apps.utils.commons import *
+from apps.login.services import *
+import json
+
 # Create your views here.my
 def login(request):
 
@@ -44,4 +46,6 @@ def register_handler(request, entity):
 #       print(entity.role)
 #       '''
 
-
+def unTester(request):
+    users = getUserByRole('test')
+    return HttpResponse(json.dumps(opposite(users)), content_type='application/json')

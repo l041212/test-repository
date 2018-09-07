@@ -22,6 +22,19 @@ def saveTestReport(request, entity):
         print(e)
         return False
 
+def saveTestReportByUnTester(request, jobInfo_id, user_id):
+    entity = TestReport()
+    entity.jobInfo = JobInfo.objects.get(pk=jobInfo_id)
+    entity.user_id = user_id
+    entity = writeFlowInfoSimple(request, entity, User, TestReport)
+    entity.status = '0'
+    try:
+        entity.save()
+        return True
+    except Exception as e:
+        print(e)
+        return False
+
 def getTestReportByFilter(entity):
     cursor = connection.cursor()
     query = ""

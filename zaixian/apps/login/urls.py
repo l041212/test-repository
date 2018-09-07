@@ -23,6 +23,7 @@ urlpatterns = [
     # path = ('admin/',admin.site.urls),
     url(r'^login/$',login),
     url(r'^register/$',register),
-    url(r'^register_handler/$',register_handler)
+    url(r'^register_handler/$',register_handler),
+    url(r'^unTester', unTester),
 
 ]

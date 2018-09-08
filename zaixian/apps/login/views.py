@@ -1,21 +1,9 @@
-<<<<<<< HEAD
-# from django.shortcuts import render
-from django.shortcuts import render,redirect
-from .models import User
-from django.http import HttpResponse
-from apps.utils.commons import *
-from apps.login.models import *
-from django.db import connection
-import pymysql
-=======
 from django.shortcuts import render,redirect,reverse
 from .models import User
 from django.http import HttpResponse
 from apps.utils.commons import *
 from apps.login.services import *
 import json
-
->>>>>>> 45b8ca72e62963f42e76aca72ea852094689da8c
 # Create your views here.my
 
 def login(request):
@@ -64,12 +52,6 @@ def save(request, entity):
       flag = saveUser(request, entity)
       return HttpResponse(flag)
 
-<<<<<<< HEAD
-    else:
-        User.save(entity)
-        return redirect('/login/login')
-=======
 def unTester(request):
     users = getUserByRole('test')
     return HttpResponse(json.dumps(opposite(users)), content_type='application/json')
->>>>>>> 45b8ca72e62963f42e76aca72ea852094689da8c

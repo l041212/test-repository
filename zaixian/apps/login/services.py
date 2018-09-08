@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 from apps.login.models import *
 from apps.utils.commons import *
 from functools import wraps
@@ -35,4 +32,3 @@ def saveUser(request, entity):
 def getUserByCodeAndPassword(code, password):
     users = User.objects.filter(code=code, password=password)
     return users
->>>>>>> 45b8ca72e62963f42e76aca72ea852094689da8c

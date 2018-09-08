@@ -1,11 +1,11 @@
 $(function(){
-	var error_email = false;
+	var error_code = false;
 	var error_password = false;
 	var error_check = false;
 
 
-	$('#email').blur(function() {
-		check_email();
+	$('#code').blur(function() {
+		check_code();
 	});
 
 	$('#pwd').blur(function() {
@@ -32,18 +32,18 @@ $(function(){
 
 
 
-	function check_email(){
+	function check_code(){
 		var re = /^[a-z0-9][\w\.\-]*@[a-z0-9\-]+(\.[a-z]{2,5}){1,2}$/;
 
-		if(re.test($('#email').val()))
+		if(re.test($('#code').val()))
 		{
-			$('#email').next().hide();
-			error_email = false;
+			$('#code').next().hide();
+			error_code = false;
 		}
 		else
 		{
-			$('#email').next().html('你输入的邮箱格式不正确')
-			$('#email').next().show();
+			$('#code').next().html('你输入的邮箱格式不正确')
+			$('#code').next().show();
 			error_check_password = true;
 		}
 
@@ -52,10 +52,10 @@ $(function(){
 
 	$('#reg_form').submit(function() {
 
-		check_email();
+		check_code();
 		check_password();
         console.log
-		if( error_password == false && error_email == false && error_check == false)
+		if( error_password == false && error_code == false && error_check == false)
 		{
 			return true;
 		}

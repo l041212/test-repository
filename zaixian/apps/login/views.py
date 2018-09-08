@@ -1,47 +1,40 @@
 # from django.shortcuts import render
-from django.shortcuts import render,redirect,reverse
+from django.shortcuts import render,redirect
 from .models import User
 from django.http import HttpResponse
 from apps.utils.commons import *
+from apps.login.models import *
+from django.db import connection
+import pymysql
 # Create your views here.my
-def login(request):
 
+def login(request):
    context={}
-   return render(request,'register.html',context)
-   #request.session["user_id"] = xxx
+   return render(request,'login.html',context)
 
 def login_handler(request):
+    code = request.POST.get('code')
+    password = request.POST.get('password')
+    users = User.objects.filter(code=code,password=password)#账户密码要一致
+    if len(users) > 0:
+        request.session["user_id"] = users[0].id
+        return redirect("/jobInfo/list/")
+    else:
 
-   email = request.POST.get("email")
-   passwd = request.POST.get("password")
-
-
-
+        return redirect("/login/login/")
 
 def register(request):
-      context={}
-      return render(request, 'register.html', context)
+        context={}
+        return render(request, 'register.html', context)
 
 @mirror(User())
 def register_handler(request, entity):
-      User.save(entity)
-      return redirect('/login/login')
-
-# # if request.method=="POST":
-#    #    context={}
-#
-#       '''
-#       email=request.POST.get("email")
-#       password = request.POST.get("password")
-#       user = User()
-#       user.email(email)
-#       user.password(password)
-#       User.save(user)
-#       print(email)
-#       print(password)
-#       print(entity.name)
-#       print(entity.code)
-#       print(entity.role)
-#       '''
+    code = request.POST.get('code')
+    users = User.objects.filter(code=code)
+    if len(users) >0:
+         return HttpResponse('账户已经注册')
 
 
+    else:
+        User.save(entity)
+        return redirect('/login/login')

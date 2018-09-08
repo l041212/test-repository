@@ -41,3 +41,7 @@ def delete(request):
     for id in request.POST.getlist("ids[]", []):
         flag &= deleteJobInfoById(request, id)
     return HttpResponse(flag)
+
+def unModule(request):
+    items = getJobInfoByUnModule()
+    return HttpResponse(json.dumps(opposite(items)), content_type='application/json')

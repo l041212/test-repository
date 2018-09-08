@@ -1,0 +1,56 @@
+{% extends 'login_frame.html' %}
+{% block header %}
+    <link rel="stylesheet" href="/static/style/jobModule_table.css">
+    <script src="/static/script/jobModule_table.js"></script>
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <h2>模板</h2>
+        <div class="card">
+            <div class="card-header">
+                <button class="btn btn-sm btn-primary" type="button" id="backBtn">返回</button>
+                <button class="btn btn-sm btn-primary" type="button" id="saveBtn">保存</button>
+                <div class="alert alert-success">数据已经保存...</div>
+                <div class="alert alert-danger">数据保存失败...</div>
+            </div>
+            <div class="card-body">
+                <div class="card job-module">
+                    <form type="method">
+                        <div class="card-body">
+                            <h4 class="card-title">模板：</h4>
+                            <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+                            <input type="hidden" name="id" value="{{ jobModule.id }}">
+                            <input type="hidden" name="action" value="{{ action }}">
+                            <div class="form-group col-md-6">
+                                <label for="name">模板名称:</label>
+                                <input name="name" class="form-control" value="{{ jobModule.name }}">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="_jobInfo_id">职业名称:</label>
+                                <input type="hidden" name="jobInfo_id" value="{{ jobModule.jobInfo_id }}">
+                                <span name="jobInfo_name" class="form-control" type="hidden">{{ jobInfo.name }}</span>
+                                <select name="_jobInfo_id" class="form-control">
+                                    <option></option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="_jobInfo_status">职业状态:</label>
+                                <input type="hidden" name="jobInfo_status" value="{{ jobInfo.status }}">
+                                <select name="_jobInfo_status" class="form-control">
+                                    <option></option>
+                                    <option value="0">测试中</option>
+                                    <option value="1">生成中</option>
+                                    <option value="2">已生成</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="text">模板文本:</label>
+                                <textarea name="text" class="form-control" rows="7">{{ jobModule.text }}</textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

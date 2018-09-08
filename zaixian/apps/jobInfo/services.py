@@ -77,3 +77,5 @@ def deleteJobInfoById(request, id):
         print(e)
         return False
 
+def getJobInfoByUnModule():
+    return JobInfo.objects.filter(isDelete=False, status='0')

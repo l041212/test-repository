@@ -1,0 +1,23 @@
+
+.container {
+    margin-top: 2%;
+}
+
+.form-group{
+    float: left;
+}
+
+.card-header {
+    height: 65px;
+}
+
+.alert {
+    float: right;
+    display: none;
+    padding:6px 12px;
+    margin: 0;
+}
+
+.card-header .active {
+    display: block;
+}

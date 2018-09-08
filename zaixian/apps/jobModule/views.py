@@ -4,6 +4,9 @@ from apps.jobModule.models import *
 from apps.login.models import *
 from apps.utils.commons import *
 from apps.jobInfo.services import getJobInfoById
+from apps.jobModule.services import *
+from apps.login.services import *
+import json
 
 
 # Create your views here.
@@ -20,15 +23,6 @@ def edit(request, jobInfo_id, id):
     }
     return render(request, 'test1.html', context)
 
-@mirror(JobModule())
-def save(request, entity):
-    print(entity.id)
-    print(entity.jobInfo_id)
-    print(entity.jobInfo_status)
-    print(entity.name)
-    print(entity.text)
-    return HttpResponse("success")
-
 def lol(request):
     if request.method == "POST":
         JobModule.objects.create(name=request.POST['name'],text=request.POST['text'],attachment=request.POST['attachment'])
@@ -41,5 +35,44 @@ def list(request):
 def yaya(request):
     return render(request,'show.html')
 
+@sessionUser()
+def table(request, action, id, sessionUser):
+    jobModule = getJobModuleById(id)
+    jobInfo = getJobInfoById(jobModule['jobInfo_id']) if jobModule != None and isNotNull(jobModule['jobInfo_id'], 'str') else None
+    context = {
+        'action': action,
+        'id': id if isNotNull(id, 'str') else None,
+        'jobModule': jobModule,
+        'jobInfo':  jobInfo,
+        'sessionUser': sessionUser,
+    }
+    return render(request, 'jobModule_table.html', context)
+
+@mirror(JobModule())
+def save(request, entity):
+    flag = saveJobModule(request, entity)
+    return HttpResponse(flag)
+
+@sessionUser()
+def list(request, page_limit, sessionUser):
+    context = {
+        'page_limit': page_limit if isNotNull(page_limit, 'str') else '10',
+        'page_number': '1',
+        'sessionUser': sessionUser,
+    }
+    return render(request, 'jobModule_list.html', context)
+
+@mirror(JobInfo())
+def listData(request, entity, page_limit, page_number):
+    items = opposite(getJobModuleByFilter(entity))
+    page = SimplePage().writeSimplePage(items, page_limit, page_number)
+    page.page_object_list = json.dumps(page.page_object_list)
+    return HttpResponse(json.dumps(reverse(page)), content_type='application/json')
+
+def delete(request):
+    flag = True
+    for id in request.POST.getlist("ids[]", []):
+        flag &= deleteModuleById(request, id)
+    return HttpResponse(flag)
 
 

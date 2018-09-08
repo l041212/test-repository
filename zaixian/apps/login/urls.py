@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^login/$',login),
     url(r'^register/$',register),
     url(r'^register_handler/$',register_handler),
+    url(r'^login_handler/$',login_handler),
     url(r'^unTester/?', unTester),
     url(r'^info/?$', info),
     url(r'^save/?$', save),

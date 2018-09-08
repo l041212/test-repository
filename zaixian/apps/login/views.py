@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from apps.utils.commons import *
 from apps.login.services import *
 import json
+
 # Create your views here.my
 
 def login(request):

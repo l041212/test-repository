@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # from django.shortcuts import render
 from django.shortcuts import render,redirect
 from .models import User
@@ -6,6 +7,15 @@ from apps.utils.commons import *
 from apps.login.models import *
 from django.db import connection
 import pymysql
+=======
+from django.shortcuts import render,redirect,reverse
+from .models import User
+from django.http import HttpResponse
+from apps.utils.commons import *
+from apps.login.services import *
+import json
+
+>>>>>>> 45b8ca72e62963f42e76aca72ea852094689da8c
 # Create your views here.my
 
 def login(request):
@@ -34,7 +44,32 @@ def register_handler(request, entity):
     if len(users) >0:
          return HttpResponse('账户已经注册')
 
+def info(request):
+    return render(request, "login_info.html")
 
+@mirror(User())
+def signin(request, entity):
+    users = getUserByCodeAndPassword(entity.code, entity.password)
+    if(users != None and len(users)==1):
+        request.session["user_id"] = users[0].id
+        return redirect("/jobInfo/list/")
+    return redirect("/login/info/")
+
+def signout(request):
+    request.session.flush()
+    return redirect("/login/info/")
+
+@mirror(User())
+def save(request, entity):
+      flag = saveUser(request, entity)
+      return HttpResponse(flag)
+
+<<<<<<< HEAD
     else:
         User.save(entity)
         return redirect('/login/login')
+=======
+def unTester(request):
+    users = getUserByRole('test')
+    return HttpResponse(json.dumps(opposite(users)), content_type='application/json')
+>>>>>>> 45b8ca72e62963f42e76aca72ea852094689da8c

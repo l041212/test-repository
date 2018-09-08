@@ -3,21 +3,24 @@ from django.http import HttpResponse
 import json
 from apps.base.models import *
 from apps.jobInfo.services import *
+from apps.login.services import *
 
-def table(request, action, id):
-    user = User.objects.all()[0]
-    request.session['user_id'] = user.id
+@sessionUser()
+def table(request, action, id, sessionUser):
     context = {
         'action': action,
         'id': id if isNotNull(id, 'str') else None,
         'jobInfo': getJobInfoById(id),
+        'sessionUser': sessionUser,
     }
     return render(request, 'jobInfo_table.html', context)
 
-def list(request, page_limit):
+@sessionUser()
+def list(request, page_limit, sessionUser):
     context = {
-        'page_limit': page_limit if isNotNull(page_limit, 'str') else '3',
+        'page_limit': page_limit if isNotNull(page_limit, 'str') else '10',
         'page_number': '1',
+        'sessionUser': sessionUser,
     }
     return render(request, 'jobInfo_list.html', context)
 
@@ -31,4 +34,10 @@ def listData(request, entity, page_limit, page_number):
 @mirror(JobInfo())
 def save(request, entity):
     flag = saveJobInfo(request, entity)
+    return HttpResponse(flag)
+
+def delete(request):
+    flag = True
+    for id in request.POST.getlist("ids[]", []):
+        flag &= deleteJobInfoById(request, id)
     return HttpResponse(flag)

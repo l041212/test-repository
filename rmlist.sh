@@ -14,3 +14,4 @@ rm -rf ./zaixian/apps/testReport/__pycache__/
 rm -rf ./zaixian/apps/testReport/migrations/__pycache__/
 rm -rf ./zaixian/apps/utils/__pycache__/
 rm -rf ./zaixian/zaixian/__pycache__/
+rm -rf ./zaixian/apps/middleware/__pycache__/

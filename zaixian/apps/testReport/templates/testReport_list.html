@@ -1,0 +1,65 @@
+{% extends 'login_frame.html' %}
+{% block header %}
+    <link rel="stylesheet" href="/static/style/testReport_list.css">
+    <script src="/static/script/testReport_list.js"></script>
+{% endblock %}
+{% block content %}
+    <div class="card container col-offset-md-1 col-md-10 col-offset-md-1">
+        <div class="card-body">
+            <ul class="nav nav-tabs" style="display:none"></ul>
+            <form action="" method="post">
+                <div class="card">
+                    <div id="search" class="card-header">
+                        <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+                        <input type="hidden" name="user_role" value="{{ sessionUser.role }}">
+                        <div class="form-group">
+                            <label class="col-md-2" for="user_name">测试者:</label>
+                            <input class="col-md-2" type="text" name="user_name">
+                            <label class="col-md-2" for="jobInfo_name">职业名称:</label>
+                            <input class="col-md-2" type="text" name="jobInfo_name">
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2" for="status">状态:</label>
+                            <input type="hidden" name="status">
+                            <select class="col-md-2"  name="_status">
+                                <option value=""></option>
+                                <option value="0">未读</option>
+                                <option value="1">淘汰</option>
+                                <option value="2">候选</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="table" class="card-body">
+                        <div id="card-body-menu">
+                            <button class="btn btn-sm btn-primary" type="button" id="searchBtn">search</button>
+                            <button class="btn btn-sm btn-success" type="button" id="createBtn">create</button>
+                            <button class="btn btn-sm btn-danger" type="button" id="deleteBtn">delete</button>
+                        </div>
+                        <div id="card-body-conent">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>测试者</th>
+                                        <th>测试时间</th>
+                                        <th>应聘职位</th>
+                                        <th>适配度</th>
+                                        <th>状态</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="tail" class="card-footer">
+                        <input type="hidden" name="page_count">
+                        <input type="hidden" name="page_limit" value="{{page_limit}}">
+                        <input type="hidden" name="page_number" value="{{page_number}}">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

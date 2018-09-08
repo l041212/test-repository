@@ -1,0 +1,41 @@
+{% extends 'login_frame.html' %}
+{% block header %}
+{% endblock %}
+{% block content %}
+<body>
+<h1>添加用户</h1>
+    <form action="/jobModule/show/" method="post">
+        {% csrf_token %}
+        <p><inpur type="text" name="name"/></p>
+        <p><input type="text" name="text"/></p>
+        <p><input type="text" name="attachment"></p>
+        <input type="submit" value="增加"/>
+    </form>
+
+
+<h2>信息展示</h2>
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>用户</th>
+                    <th>文本</th>
+                    <th>附件</th>
+                    <th>职业id</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for line in people_list %}
+                <tr>
+                    <td><input type="" name="name" value="{{line.name}}"></td>
+                    <td><input type="" name="text" value="{{line.text}}"></td>
+                    <td><input type="" name="attachment" value="{{line.attachment}}"></td>
+                    <td><input type="" name="jobInfo_id" value="{{line.jobInfo_id}}"></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+{% endblock %}
+

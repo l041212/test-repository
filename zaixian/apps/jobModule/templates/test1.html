@@ -108,12 +108,12 @@ ul {
     <form action="/jobModule/save/" method="post">
     <div id="content" style="background-color:#EEEEEE;height:400px;width:100%;float:left;">
         <ol>
-            <ll><a href="name">王网</a> </ll>
-            <ll><a href="test">能力等级:2级</a> </ll>
-            <ll><a href="test">行为预测：中级</a> </ll>
-            <ll><a href="test">性格特质：有时候逗逼,智商180Lp</a> </ll>
-            <ll><a href="attachment">附件</a> </ll>
-            <ll><a href="jobInfo_id">职业</a> </ll>
+            <li><a href="name">王网</a> </li>
+            <li><a href="test">能力等级:2级</a> </li>
+            <li><a href="test">行为预测：中级</a> </li>
+            <li><a href="test">性格特质：有时候逗逼,智商180Lp</a> </li>
+            <li><a href="attachment">附件</a> </li>
+            <li><a href="jobInfo_id">职业</a> </li>
         </ol>
         <input type="hidden" name="id" value="{{ id }}">
         <input type="hidden" name="jobInfo_id" value="{{ jobInfo_id }}">
@@ -134,13 +134,24 @@ ul {
         </div>
         <div class="form-group">
             <label for="text">模板内容：</label>
-            <textarea class="form-control" rows="7" name="text">{{ text }}</textarea>
+            <textarea class="form-control" rows="5" name="text">{{ text }}</textarea>
         </div>
+
     </div>
     <input type="radio" name="sex" value="删除"> 删除<br>
     <input type="radio" name="sex" value="保存" checked="checked">保存<br>
     <input type="submit" value="提交">
     <input type="reset" value="重置">
     </form>
+    <div>
+        <form action="/jobModule/lol/" method="post">
+            {% csrf_token %}
+            <p><input name="name"/></p>
+            <p><input name="text"/></p>
+            <p><input name="attachment"></p>
+            <p><input name="jobInfo_id"></p>
+            <p><input type="submit" value="保存数据进数据库"/></p>
+        </form>
+    </div>
 </body>
 {% endblock %}

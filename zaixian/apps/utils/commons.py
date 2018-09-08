@@ -45,7 +45,14 @@ def writeFlowInfo(entity, type):
             entity.isDelete = items[0].isDelete
     return entity
 
+def writeFlowInfoSimple(request, entity, userType, entityType):
+    user = userType.objects.filter(pk=request.session['user_id'])[0]
+    entity = writeFlowInfo(entity, entityType)
+    entity.updateUser = user.id
+    entity.createUser = entity.createUser if isNotNull(entity.createUser, 'str') else user.id
+    return entity
+
 def isNotNull(value, type):
     if type == 'str':
-        return value != None and str(value).strip() != ''
+        return value != None and value != 'None' and str(value).strip() != ''
     return False

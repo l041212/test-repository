@@ -9,3 +9,15 @@
 #frame_menu #frame_menu_top {
     height: 120px;
 }
+
+.nav-item .active {
+    color: darkblue;
+}
+
+#signout {
+    width:25%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

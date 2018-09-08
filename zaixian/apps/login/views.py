@@ -54,8 +54,12 @@ def signin(request, entity):
     users = getUserByCodeAndPassword(entity.code, entity.password)
     if(users != None and len(users)==1):
         request.session["user_id"] = users[0].id
-        return redirect("/jobInfo/list")
-    return redirect("/login/info")
+        return redirect("/jobInfo/list/")
+    return redirect("/login/info/")
+
+def signout(request):
+    request.session.flush()
+    return redirect("/login/info/")
 
 @mirror(User())
 def save(request, entity):

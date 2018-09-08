@@ -5,19 +5,22 @@ from apps.base.models import *
 from apps.jobInfo.services import *
 from apps.login.services import *
 
-def table(request, action, id):
+@sessionUser()
+def table(request, action, id, sessionUser):
     context = {
         'action': action,
         'id': id if isNotNull(id, 'str') else None,
         'jobInfo': getJobInfoById(id),
+        'sessionUser': sessionUser,
     }
     return render(request, 'jobInfo_table.html', context)
 
-def list(request, page_limit):
+@sessionUser()
+def list(request, page_limit, sessionUser):
     context = {
         'page_limit': page_limit if isNotNull(page_limit, 'str') else '10',
         'page_number': '1',
-        'user': getUserById(request.session['user_id'])
+        'sessionUser': sessionUser,
     }
     return render(request, 'jobInfo_list.html', context)
 

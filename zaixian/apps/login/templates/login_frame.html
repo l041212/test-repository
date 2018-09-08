@@ -8,6 +8,8 @@
 {% block body %}
     <div id="frame_menu" class="col-md-2">
         <div id="frame_menu_top" class="card">
+            <p>Welcome...`(^_^)/"</p>{{ sessionUser.role }}:<h4>{{ sessionUser.name }}</h4>
+            <a id="signout" href="/login/signout/">注销</a>
         </div>
         <div id="frame_menu_content" class="card">
             <div class="card-header">

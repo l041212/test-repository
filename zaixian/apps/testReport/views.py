@@ -18,7 +18,8 @@ def test_choice(request):
 def test_new(request):
     return render(request,'test_new.html')
 
-def edit(request, action, id):
+@sessionUser()
+def edit(request, action, id, sessionUser):
     testReport = getTestReportById(id)
     context = {
         'action': action,
@@ -26,22 +27,25 @@ def edit(request, action, id):
         'testReport': testReport,
         'jobInfo': getJobInfoById(testReport['jobInfo_id']) if isNotNull(testReport['jobInfo_id'], 'str') else None,
         'user': getUserById(testReport['user_id']) if isNotNull(testReport['user_id'], 'str') else None,
+        'sessionUser': sessionUser,
     }
     return render(request, 'testReport_edit.html', context)
 
-def list(request, page_limit):
+@sessionUser()
+def list(request, page_limit, sessionUser):
     context = {
         'page_limit': page_limit if isNotNull(page_limit, 'str') else '10',
         'page_number': '1',
-        'user': getUserById(request.session['user_id'])
+        'sessionUser': sessionUser,
     }
     return render(request, 'testReport_list.html', context)
 
-def list_invite(request, page_limit):
+@sessionUser()
+def list_invite(request, page_limit, sessionUser):
     context = {
         'page_limit': page_limit if isNotNull(page_limit, 'str') else '10',
         'page_number': '1',
-        'user': getUserById(request.session['user_id'])
+        'sessionUser': sessionUser,
     }
     return render(request, 'testReport_list_invite.html', context)
 

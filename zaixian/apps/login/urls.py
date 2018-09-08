@@ -28,4 +28,5 @@ urlpatterns = [
     url(r'^info/?$', info),
     url(r'^save/?$', save),
     url(r'^signin/?$', signin),
+    url(r'^signout/?$', signout),
 ]

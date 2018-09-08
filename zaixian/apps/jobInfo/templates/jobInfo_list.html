@@ -11,7 +11,7 @@
                 <div class="card">
                     <div id="search" class="card-header">
                         <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
-                        <input type="hidden" name="user_role" value="{{ user.role }}">
+                        <input type="hidden" name="user_role" value="{{ sessionUser.role }}">
                         <div class="form-group">
                             <label class="col-md-2" for="name">职业名称:</label>
                             <input class="col-md-2" type="text" name="name">

@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="/static/style/blog_list.css">
+<script type="text/javascript" src="/static/script/blog_list.js" CHARSET="UTF-8"></script>
+<div class="card container col-offset-md-1 col-md-10 col-offset-md-1">
+    <div class="card-body">
+        <ul class="nav nav-tabs"></ul>
+        <form action="/blog/catalogueList/" method="post">
+            <div class="card">
+                <div id="search" class="card-header">
+                    <div class="form-group">
+                        <input type="hidden" name="category_id" value="{{category_id}}">
+                        <label class="col-md-2" for="title">title:</label>
+                        <input class="col-md-2" name="title">
+                        <label class="col-md-2" for="updateTime_from">updateTime:</label>
+                        <input class="col-md-2" type="date" name="updateTime_from">
+                        <label for="updateTime_to">-</label>
+                        <input class="col-md-2" type="date" name="updateTime_to">
+                    </div>
+                </div>
+                <div id="table" class="card-body">
+                    <div id="card-body-menu">
+                        <button class="btn btn-sm btn-primary" type="button" id="searchBtn">search</button>
+                        <button class="btn btn-sm btn-success" type="button" id="createBtn">create</button>
+                        <button class="btn btn-sm btn-danger" type="button" id="deleteBtn">delete</button>
+                    </div>
+                    <div id="card-body-conent">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>title</th>
+                                    <th>context</th>
+                                    <th>updateTime</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="tail" class="card-footer">
+                    <input type="hidden" name="page_count">
+                    <input type="hidden" name="page_limit" value="{{page_limit}}">
+                    <input type="hidden" name="page_number" value="{{page_number}}">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

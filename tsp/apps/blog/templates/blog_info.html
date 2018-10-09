@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/static/style/blog_info.css">
+<script type="text/javascript" src="/static/script/blog_info.js" CHARSET="UTF-8"></script>
+<form action="" method="post">
+    <div class="card container col-offset-md-1 col-md-10 col-offset-md-1">
+        <p class="card-header">User Information...</p>
+        <input type="hidden" name="action" value="{{action}}">
+        <input type="hidden" name="id" value="{{id}}">
+        <input type="hidden" name="category_id" value="{{category_id}}">
+        <div class="card-body">
+            <div class="form-group">
+                <label for="title">title:</label>
+                <input name="title" class="form-control" value="{{catalogue.title}}">
+            </div>
+            <div class="form-group">
+                <label for="context">context:</label>
+                <textarea name="context" class="form-control">{{catalogue.context}}</textarea>
+            </div>
+            <div class="form-group">
+                <label for="author_id">author:</label>
+                <input type="hidden" name="author_id" value="{{catalogue.author_id}}">
+            </div>
+        </div>
+        <div class="card-footer">
+            <button id="submit" type="button" class="btn btn-primary">submit</button>
+            <button type="reset" class="btn btn-primary">reset</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% block head %}
+    <link rel="stylesheet" href="/static/style/login_frame.css">
+    <script type="text/javascript" src="/static/script/login_frame.js" charset="UTF-8"></script>
+{% endblock %}
+{% block body %}
+    <div id="frame_navigator" class="col-md-12">
+        <div id="frame_nav_left" class="col-md-3 frame_nav"></div>
+        <div id="frame_nav_center" class="col-md-7 frame_nav">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+        </div>
+        <div id="frame_nav_right" class="col-md-2 frame_nav"></div>
+    </div>
+    <div id="frame_menu" class="col-md-2">
+        <div class="card">
+            <div class="card-header">
+                <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                    Catalogue
+                </a>
+            </div>
+            <div id="collapseOne" class="collapse show" data-parent="#frame_menu">
+                <div class="card-body">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="blogList" href="#">List</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                    Item2
+                </a>
+            </div>
+            <div id="collapseTwo" class="collapse" data-parent="#frame_menu">
+                <div class="card-body">
+                    #2 Content2
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                    Item3
+                </a>
+            </div>
+            <div id="collapseThree" class="collapse" data-parent="#frame_menu">
+                <div class="card-body">
+                    #3 Content3
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="frame_content" class="col-md-10"></div>
+{% endblock %}

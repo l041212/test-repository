@@ -1,0 +1,10 @@
+#content{
+    margin-top: 2%;
+    float: right;
+}
+#registerModal .close{
+    margin: 0;
+}
+#registerModal #registerLabel{
+    line-height: 2;
+}
